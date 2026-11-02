@@ -1,0 +1,1334 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Flashcards H1 Totalitarismes et Seconde Guerre mondiale</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;800;900&family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=IBM+Plex+Mono:wght@500;600&display=swap">
+<style>
+/* Layout : une colonne centrée façon « boîte à fiches bristol ». Les cartes sont des fiches lignées, chaque thème a sa couleur d'onglet. */
+:root{
+  --paper:#E8EBEE; --card:#FFFFFF; --ink:#18202C; --ink-2:#4F5B6B; --line:#CBD3DC;
+  --rule:#C9DAEE; --margin:#E6A3A3; --accent:#1E3A8A; --accent-ink:#FFFFFF; --gold:#A86A0C;
+  --ok:#15803D; --mid:#B45309; --ko:#B91C1C; --shadow:rgba(24,32,44,.12);
+  --c-def:#0F766E; --c-dates:#A15C07; --c-urss:#B42318; --c-nazi:#4B5565; --c-fp:#1D4ED8; --c-approf:#7C3AED; --c-anea:#9F1239; --c-methode:#4D7C0F;
+  --f-display:"Big Shoulders Display","Arial Narrow","Roboto Condensed",Impact,sans-serif;
+  --f-body:"Atkinson Hyperlegible",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  --f-mono:"IBM Plex Mono",ui-monospace,"SFMono-Regular",Menlo,Consolas,monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --paper:#10151C; --card:#19212B; --ink:#E7EBF0; --ink-2:#9DA9B8; --line:#2C3746;
+  --rule:#22334A; --margin:#5C2E2E; --accent:#9DB7FF; --accent-ink:#0E1626; --gold:#E3B252;
+  --ok:#4ADE80; --mid:#FBBF24; --ko:#F87171; --shadow:rgba(0,0,0,.45);
+  --c-def:#2DD4BF; --c-dates:#F0B429; --c-urss:#F87171; --c-nazi:#A9B4C2; --c-fp:#7EA6FF; --c-approf:#B794F6; --c-anea:#FB7185; --c-methode:#A3E635;
+  color-scheme:dark}}
+:root[data-theme="dark"]{
+  --paper:#10151C; --card:#19212B; --ink:#E7EBF0; --ink-2:#9DA9B8; --line:#2C3746;
+  --rule:#22334A; --margin:#5C2E2E; --accent:#9DB7FF; --accent-ink:#0E1626; --gold:#E3B252;
+  --ok:#4ADE80; --mid:#FBBF24; --ko:#F87171; --shadow:rgba(0,0,0,.45);
+  --c-def:#2DD4BF; --c-dates:#F0B429; --c-urss:#F87171; --c-nazi:#A9B4C2; --c-fp:#7EA6FF; --c-approf:#B794F6; --c-anea:#FB7185; --c-methode:#A3E635;
+  color-scheme:dark}
+
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+html,body{min-height:100%}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--f-body);font-size:16px;line-height:1.5;-webkit-font-smoothing:antialiased}
+button{font:inherit;color:inherit;cursor:pointer}
+button:focus-visible,input:focus-visible,[tabindex]:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+.wrap{max-width:860px;margin:0 auto;padding-inline:16px;padding-block:20px 56px}
+h1,h2,h3{text-wrap:balance;margin:0}
+.mono{font-family:var(--f-mono)}
+.muted{color:var(--ink-2)}
+
+/* ---------- Barre du haut ---------- */
+.top{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:18px}
+.brand{display:flex;align-items:center;gap:12px;min-width:0}
+.tab-h2{font-family:var(--f-display);font-weight:900;font-size:30px;line-height:1;padding:6px 10px 4px;border:2.5px solid var(--ink);border-radius:4px;letter-spacing:.02em}
+.brand-txt{min-width:0}
+.brand-txt b{display:block;font-family:var(--f-display);font-weight:800;font-size:21px;line-height:1.05;letter-spacing:.01em;text-transform:uppercase}
+.brand-txt span{font-family:var(--f-mono);font-size:12px;color:var(--ink-2);letter-spacing:.06em;text-transform:uppercase}
+.navbtns{display:flex;gap:8px}
+.ghost{background:transparent;border:1.5px solid var(--line);border-radius:999px;padding:7px 14px;font-size:14px;font-weight:700;display:inline-flex;align-items:center;gap:6px}
+.ghost:hover{border-color:var(--ink-2)}
+
+/* ---------- Tableau de bord ---------- */
+.dash{background:var(--card);border-radius:14px;box-shadow:0 1px 0 var(--line),0 10px 30px -18px var(--shadow);padding:20px;display:grid;gap:18px}
+.player{display:flex;gap:16px;align-items:center;flex-wrap:wrap}
+.lvl{width:66px;height:66px;flex:none;border-radius:50%;display:grid;place-items:center;background:var(--accent);color:var(--accent-ink);font-family:var(--f-display);font-weight:900;font-size:32px;line-height:1;position:relative}
+.lvl small{position:absolute;bottom:-8px;font-family:var(--f-mono);font-size:10px;background:var(--card);color:var(--ink);border:1.5px solid var(--accent);border-radius:999px;padding:1px 7px;letter-spacing:.06em}
+.pinfo{flex:1;min-width:200px}
+.pname{display:flex;align-items:baseline;gap:8px;flex-wrap:wrap}
+.pname h2{font-family:var(--f-display);font-weight:800;font-size:26px;line-height:1.1;text-transform:uppercase;letter-spacing:.01em}
+.namefield{display:flex;gap:6px;align-items:center;margin-top:2px}
+.namefield input{font:inherit;font-size:16px;padding:5px 10px;border:1.5px solid var(--line);border-radius:8px;background:var(--paper);color:var(--ink);width:180px;max-width:100%}
+.xpbar{height:12px;border-radius:999px;background:var(--paper);overflow:hidden;margin-top:8px;border:1px solid var(--line)}
+.xpbar i{display:block;height:100%;background:linear-gradient(90deg,var(--accent),var(--gold));border-radius:999px;transition:width .6s ease}
+.xptxt{display:flex;justify-content:space-between;font-family:var(--f-mono);font-size:12px;color:var(--ink-2);margin-top:4px;font-variant-numeric:tabular-nums}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.stat{border:1.5px solid var(--line);border-radius:10px;padding:10px 12px;min-width:0}
+.stat b{display:block;font-family:var(--f-display);font-weight:900;font-size:30px;line-height:1;font-variant-numeric:tabular-nums}
+.stat span{font-size:12.5px;color:var(--ink-2);line-height:1.25;display:block;margin-top:3px}
+.stat.ready b{color:var(--ok)}
+.stat.fire b{color:var(--mid)}
+@media (max-width:560px){.stats{grid-template-columns:repeat(2,1fr)}}
+
+.sec-title{display:flex;align-items:baseline;justify-content:space-between;gap:10px;margin:26px 0 10px;flex-wrap:wrap}
+.sec-title h3{font-family:var(--f-display);font-weight:800;font-size:22px;text-transform:uppercase;letter-spacing:.02em}
+.linkbtn{background:none;border:0;padding:0;color:var(--accent);font-weight:700;font-size:14px;text-decoration:underline;text-underline-offset:3px}
+
+/* Thèmes = onglets de boîte à fiches */
+.themes{display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:10px}
+.theme{--c:var(--accent);text-align:left;background:var(--card);border:1.5px solid var(--line);border-radius:10px;padding:12px 12px 10px;display:grid;gap:6px;position:relative;transition:border-color .15s,transform .15s}
+.theme:hover{transform:translateY(-1px)}
+.theme[aria-pressed="true"]{border-color:var(--c);box-shadow:inset 0 0 0 1px var(--c);background:var(--card);background:color-mix(in srgb,var(--c) 7%,var(--card))}
+.theme .th-top{display:flex;justify-content:space-between;align-items:center;gap:8px}
+.theme .th-name{font-weight:700;font-size:15.5px;line-height:1.2;color:var(--ink)}
+.chk{width:20px;height:20px;border-radius:5px;border:2px solid var(--line);flex:none;display:grid;place-items:center}
+.theme[aria-pressed="true"] .chk{background:var(--c);border-color:var(--c)}
+.theme[aria-pressed="true"] .chk::after{content:"";width:10px;height:5px;border-left:2.5px solid var(--card);border-bottom:2.5px solid var(--card);transform:rotate(-45deg) translate(1px,-1px)}
+.th-meta{display:flex;justify-content:space-between;font-family:var(--f-mono);font-size:11.5px;color:var(--ink-2);font-variant-numeric:tabular-nums}
+.mbar{height:6px;border-radius:999px;background:var(--paper);overflow:hidden}
+.mbar i{display:block;height:100%;background:var(--c);border-radius:999px}
+.theme .dot{width:10px;height:10px;border-radius:50%;background:var(--c);display:inline-block;margin-right:7px;vertical-align:1px}
+
+/* Modes */
+.modes{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+@media (max-width:700px){.modes{grid-template-columns:1fr}}
+.mode{background:var(--card);border:1.5px solid var(--line);border-radius:12px;padding:16px;display:grid;gap:10px;align-content:start}
+.mode h4{margin:0;font-family:var(--f-display);font-weight:800;font-size:22px;text-transform:uppercase;letter-spacing:.02em;display:flex;align-items:center;gap:8px}
+.mode p{margin:0;font-size:14px;color:var(--ink-2);line-height:1.4}
+.seg{display:flex;gap:4px;background:var(--paper);border-radius:999px;padding:3px;width:max-content;max-width:100%}
+.seg button{border:0;background:transparent;border-radius:999px;padding:4px 11px;font-size:13px;font-weight:700;color:var(--ink-2);font-variant-numeric:tabular-nums}
+.seg button[aria-pressed="true"]{background:var(--card);color:var(--ink);box-shadow:0 1px 3px var(--shadow)}
+.go{background:var(--accent);color:var(--accent-ink);border:0;border-radius:10px;padding:11px 14px;font-weight:700;font-size:15px;display:flex;align-items:center;justify-content:center;gap:8px;transition:transform .12s,filter .12s}
+.go:hover{filter:brightness(1.08)}
+.go:active{transform:scale(.98)}
+.go.alt{background:transparent;color:var(--ink);border:1.5px solid var(--ink)}
+.go[disabled]{opacity:.45;cursor:not-allowed}
+.review-banner{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-top:12px;padding:12px 14px;border-radius:10px;border:1.5px dashed var(--ko);background:var(--card);background:color-mix(in srgb,var(--ko) 6%,var(--card))}
+.review-banner p{margin:0;font-size:14.5px;min-width:0}
+.review-banner .go{background:var(--ko);color:var(--card)}
+
+.badge-strip{display:flex;gap:10px;flex-wrap:wrap}
+
+/* ---------- Session ---------- */
+.sess-head{display:flex;align-items:center;gap:12px;margin-bottom:14px}
+.prog{flex:1;height:10px;background:var(--card);border:1px solid var(--line);border-radius:999px;overflow:hidden}
+.prog i{display:block;height:100%;background:var(--accent);transition:width .35s ease}
+.sess-count{font-family:var(--f-mono);font-size:13px;color:var(--ink-2);font-variant-numeric:tabular-nums;white-space:nowrap}
+.combo{font-family:var(--f-display);font-weight:900;font-size:19px;color:var(--mid);min-width:64px;text-align:right;letter-spacing:.02em}
+.combo.pop{animation:pop .35s ease}
+@keyframes pop{50%{transform:scale(1.35)}}
+
+.stage{perspective:1600px}
+.flip{display:grid;transform-style:preserve-3d;transition:transform .55s cubic-bezier(.2,.75,.25,1);cursor:pointer;-webkit-tap-highlight-color:transparent}
+.flip.flipped{transform:rotateY(180deg)}
+.face{grid-area:1/1;backface-visibility:hidden;-webkit-backface-visibility:hidden;background:var(--card);border-radius:14px;box-shadow:0 1px 0 var(--line),0 18px 40px -22px var(--shadow);min-height:340px;display:flex;flex-direction:column;overflow:hidden;--c:var(--accent)}
+.face.back{transform:rotateY(180deg)}
+/* fiche bristol : lignes bleues + marge rouge */
+.ruled{flex:1;display:flex;flex-direction:column;padding:22px 22px 18px 44px;position:relative;
+  background-image:linear-gradient(var(--card) 0 0),repeating-linear-gradient(to bottom,transparent 0 27px,var(--rule) 27px 28px);
+  background-size:2px 100%,100% 100%;background-repeat:no-repeat;background-position:30px 0,0 6px}
+.ruled::before{content:"";position:absolute;left:32px;top:0;bottom:0;width:1.5px;background:var(--margin)}
+.fhead{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:10px 16px;border-bottom:3px solid var(--c);background:var(--card);background:color-mix(in srgb,var(--c) 9%,var(--card))}
+.ftag{font-family:var(--f-mono);font-weight:600;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--c)}
+.fbox{font-family:var(--f-mono);font-size:11.5px;color:var(--ink-2);display:flex;gap:3px;align-items:center}
+.fbox i{width:8px;height:8px;border-radius:2px;background:var(--line);display:inline-block}
+.fbox i.on{background:var(--c)}
+.q{font-weight:700;font-size:clamp(21px,3.6vw,28px);line-height:1.3;margin:auto 0;text-wrap:balance;padding-block:18px}
+.hint{font-family:var(--f-mono);font-size:12px;color:var(--ink-2);text-align:center;letter-spacing:.04em;margin-top:auto}
+.ans-label{font-family:var(--f-mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--c);font-weight:600}
+.ans{font-weight:700;font-size:clamp(18px,2.8vw,22px);line-height:1.35;margin:4px 0 10px}
+.det{font-size:15.5px;line-height:1.6;margin:0 0 12px;color:var(--ink)}
+.det ul{margin:4px 0;padding-left:20px}
+.plus{margin-top:auto;border-radius:10px;padding:10px 12px;background:var(--card);background:color-mix(in srgb,var(--c-approf) 8%,var(--card));border:1px solid color-mix(in srgb,var(--c-approf) 30%,var(--card));font-size:14.5px;line-height:1.5}
+.plus b.lab{display:block;font-family:var(--f-mono);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--c-approf);margin-bottom:2px}
+.qback{font-size:13.5px;color:var(--ink-2);margin:0 0 6px;font-style:italic}
+
+.rate{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:14px}
+.rate button{border:2px solid var(--line);background:var(--card);border-radius:12px;padding:12px 8px;font-weight:700;font-size:15px;display:grid;gap:2px;justify-items:center;transition:transform .1s}
+.rate button small{font-family:var(--f-mono);font-size:11px;font-weight:500;color:var(--ink-2)}
+.rate button:active{transform:scale(.97)}
+.rate .r0{border-color:var(--ko);color:var(--ko)}
+.rate .r1{border-color:var(--mid);color:var(--mid)}
+.rate .r2{border-color:var(--ok);color:var(--ok)}
+.rate .r0:hover{background:var(--card);background:color-mix(in srgb,var(--ko) 8%,var(--card))}
+.rate .r1:hover{background:var(--card);background:color-mix(in srgb,var(--mid) 8%,var(--card))}
+.rate .r2:hover{background:var(--card);background:color-mix(in srgb,var(--ok) 8%,var(--card))}
+.reveal{margin-top:14px;width:100%}
+.keys{text-align:center;font-family:var(--f-mono);font-size:11.5px;color:var(--ink-2);margin-top:10px}
+@media (hover:none){.keys{display:none}}
+.xpfloat{position:fixed;left:50%;top:40%;transform:translateX(-50%);font-family:var(--f-display);font-weight:900;font-size:38px;color:var(--gold);pointer-events:none;animation:xpf .9s ease forwards;z-index:30;text-shadow:0 2px 0 var(--card)}
+@keyframes xpf{0%{opacity:0;transform:translate(-50%,10px)}20%{opacity:1}100%{opacity:0;transform:translate(-50%,-60px)}}
+
+/* QCM */
+.qcm-opts{display:grid;gap:10px;margin-top:14px}
+.opt{text-align:left;background:var(--card);border:2px solid var(--line);border-radius:12px;padding:12px 14px;font-size:15.5px;line-height:1.4;display:flex;gap:12px;align-items:flex-start}
+.opt .l{font-family:var(--f-mono);font-weight:600;width:26px;height:26px;flex:none;border-radius:6px;display:grid;place-items:center;background:var(--paper);font-size:13px}
+.opt:hover:not([disabled]){border-color:var(--ink-2)}
+.opt.good{border-color:var(--ok);background:var(--card);background:color-mix(in srgb,var(--ok) 10%,var(--card))}
+.opt.bad{border-color:var(--ko);background:var(--card);background:color-mix(in srgb,var(--ko) 10%,var(--card))}
+.opt[disabled]{cursor:default}
+.feedback{margin-top:12px;border-radius:12px;padding:12px 14px;background:var(--card);border-left:5px solid var(--ok);font-size:15px}
+.feedback.ko{border-left-color:var(--ko)}
+.feedback b.v{display:block;font-family:var(--f-display);font-size:20px;text-transform:uppercase;letter-spacing:.02em}
+.timer{height:4px;background:var(--line);border-radius:999px;overflow:hidden;margin-top:-2px}
+.timer i{display:block;height:100%;background:var(--gold);width:100%}
+
+/* Frise */
+.frise-pool{display:grid;gap:10px;margin-top:14px}
+.ev{text-align:left;background:var(--card);border:2px solid var(--line);border-radius:12px;padding:12px 14px;display:flex;align-items:center;gap:12px;font-size:15.5px;line-height:1.35;--c:var(--accent)}
+.ev .n{width:32px;height:32px;flex:none;border-radius:50%;border:2px dashed var(--line);display:grid;place-items:center;font-family:var(--f-display);font-weight:900;font-size:19px}
+.ev.picked{border-color:var(--accent)}
+.ev.picked .n{border:0;background:var(--accent);color:var(--accent-ink)}
+.ev .tg{font-family:var(--f-mono);font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--c);display:block}
+.ev .yr{margin-left:auto;font-family:var(--f-mono);font-weight:600;font-size:13px;white-space:nowrap}
+.ev.right{border-color:var(--ok)}
+.ev.wrong{border-color:var(--ko)}
+.ev.right .n{background:var(--ok);color:var(--card)}
+.ev.wrong .n{background:var(--ko);color:var(--card)}
+.timeline{position:relative;margin-top:16px;padding-left:22px;display:grid;gap:10px}
+.timeline::before{content:"";position:absolute;left:7px;top:6px;bottom:6px;width:3px;background:var(--line);border-radius:2px}
+.tl{position:relative;font-size:15px}
+.tl::before{content:"";position:absolute;left:-20px;top:6px;width:11px;height:11px;border-radius:50%;background:var(--c,var(--accent));border:2px solid var(--card)}
+.tl b{font-family:var(--f-mono);font-size:13px;margin-right:8px}
+
+/* Fin de session */
+.endcard{background:var(--card);border-radius:14px;padding:22px;box-shadow:0 1px 0 var(--line),0 18px 40px -22px var(--shadow);display:grid;gap:16px}
+.endcard h2{font-family:var(--f-display);font-weight:900;font-size:clamp(30px,6vw,44px);text-transform:uppercase;line-height:1}
+.endstats{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+@media (max-width:560px){.endstats{grid-template-columns:repeat(2,1fr)}}
+.endstats .stat b.k{color:var(--ko)} .endstats .stat b.m{color:var(--mid)} .endstats .stat b.o{color:var(--ok)} .endstats .stat b.x{color:var(--gold)}
+.miss{display:grid;gap:8px}
+.miss details{border:1.5px solid var(--line);border-radius:10px;padding:10px 12px;--c:var(--accent)}
+.miss summary{cursor:pointer;font-weight:700;font-size:15px;list-style-position:outside}
+.miss summary .ftag{margin-right:8px}
+.miss details p{margin:8px 0 0;font-size:15px}
+.row{display:flex;gap:10px;flex-wrap:wrap}
+.row .go{flex:1;min-width:180px}
+
+/* Badges */
+.medal{width:92px;display:grid;justify-items:center;gap:6px;text-align:center}
+.medal .disc{width:64px;height:64px;border-radius:50%;display:grid;place-items:center;background:radial-gradient(circle at 35% 30%,color-mix(in srgb,var(--gold) 55%,var(--card)),var(--gold));color:var(--card);box-shadow:inset 0 -3px 0 rgba(0,0,0,.18),0 0 0 3px var(--card),0 0 0 5px var(--gold)}
+.medal .disc svg{width:30px;height:30px}
+.medal span{font-size:12px;font-weight:700;line-height:1.2}
+.medal.locked .disc{background:var(--paper);color:var(--ink-2);box-shadow:inset 0 0 0 2px var(--line);opacity:.8}
+.medal.locked span{color:var(--ink-2);font-weight:400}
+.badges-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:10px}
+.bitem{display:flex;gap:12px;align-items:center;background:var(--card);border:1.5px solid var(--line);border-radius:12px;padding:12px}
+.bitem .medal{width:auto}
+.bitem .medal .disc{width:52px;height:52px}
+.bitem .medal .disc svg{width:24px;height:24px}
+.bitem b{display:block;font-size:15px}
+.bitem p{margin:0;font-size:13px;color:var(--ink-2);line-height:1.35}
+.bitem.locked b{color:var(--ink-2)}
+.bilan{background:var(--card);border-radius:14px;padding:20px;border:2px solid var(--ink);display:grid;gap:12px;position:relative;overflow:hidden}
+.bilan .stamp{position:absolute;right:14px;top:14px;transform:rotate(8deg);border:3px solid var(--ok);color:var(--ok);font-family:var(--f-display);font-weight:900;font-size:18px;text-transform:uppercase;padding:2px 10px;border-radius:6px;letter-spacing:.04em}
+.bilan h2{font-family:var(--f-display);font-weight:900;font-size:28px;text-transform:uppercase;padding-right:120px}
+.tbars{display:grid;gap:7px}
+.tbar{display:grid;grid-template-columns:150px 1fr 44px;gap:10px;align-items:center;font-size:14px;--c:var(--accent)}
+.tbar .mbar{height:9px}
+.tbar b{font-family:var(--f-mono);font-size:13px;text-align:right;font-variant-numeric:tabular-nums}
+@media (max-width:480px){.tbar{grid-template-columns:110px 1fr 40px;font-size:13px}}
+.danger{background:none;border:1.5px solid var(--ko);color:var(--ko);border-radius:8px;padding:7px 12px;font-weight:700;font-size:13.5px}
+.confirm-box{display:flex;gap:8px;align-items:center;flex-wrap:wrap;font-size:14px}
+
+/* Toast */
+.toast{position:fixed;left:50%;bottom:calc(18px + env(safe-area-inset-bottom,0px));transform:translateX(-50%) translateY(140%);background:var(--ink);color:var(--paper);border-radius:14px;padding:12px 16px 12px 12px;display:flex;align-items:center;gap:12px;z-index:40;transition:transform .45s cubic-bezier(.2,.9,.3,1.2);max-width:calc(100% - 32px);box-shadow:0 12px 30px -10px var(--shadow)}
+.toast.show{transform:translateX(-50%) translateY(0)}
+.toast .medal .disc{width:46px;height:46px;box-shadow:0 0 0 2px var(--ink),0 0 0 4px var(--gold)}
+.toast .medal .disc svg{width:22px;height:22px}
+.toast small{display:block;font-family:var(--f-mono);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--gold)}
+.toast b{font-size:16px}
+#confetti{position:fixed;inset:0;pointer-events:none;z-index:35}
+.foot{margin-top:34px;font-size:12.5px;color:var(--ink-2);text-align:center;font-family:var(--f-mono)}
+.fade-in{animation:fin .3s ease}
+@keyframes fin{from{opacity:.4;transform:translateY(6px)}to{opacity:1;transform:none}}
+
+@media (prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important}
+  .flip{transform:none!important}
+  .face.back{transform:none}
+  .flip .face.back{visibility:hidden}
+  .flip.flipped .face.front{visibility:hidden}
+  .flip.flipped .face.back{visibility:visible}
+}
+
+.plan{display:grid;gap:8px;margin-top:2px}
+.plan>div{border-radius:8px;padding:8px 10px;background:var(--card);background:color-mix(in srgb,var(--c-methode) 7%,var(--card));border:1px solid color-mix(in srgb,var(--c-methode) 25%,var(--card));line-height:1.45}
+.plan>div b{display:block;font-size:.95em}
+.plan .pl-i{background:transparent;border-style:dashed}
+.plan .pl-p b{color:var(--c-methode);text-transform:uppercase;letter-spacing:.02em}
+
+.how{margin-top:16px;background:var(--card);border:1.5px solid var(--line);border-radius:14px;padding:16px 18px}
+.how h3{font-family:var(--f-display);font-weight:800;font-size:22px;text-transform:uppercase;letter-spacing:.02em;margin:0 0 8px}
+.how ol{margin:0;padding:0;list-style:none;counter-reset:st;display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.how li{counter-increment:st;font-size:14.5px;line-height:1.4;display:grid;gap:4px;align-content:start;min-width:0}
+.how li::before{content:counter(st);width:28px;height:28px;border-radius:50%;background:var(--accent);color:var(--accent-ink);display:grid;place-items:center;font-family:var(--f-display);font-weight:900;font-size:17px}
+.how p{margin:12px 0 0;font-size:14px;color:var(--ink-2)}
+@media (max-width:640px){.how ol{grid-template-columns:1fr 1fr}}
+
+/* Tactile : pas de zoom au double appui, pas de surlignage gris, pas de sélection en touchant la carte */
+button,.flip,.opt,.ev,.theme{touch-action:manipulation;-webkit-tap-highlight-color:transparent}
+.flip{-webkit-user-select:none;user-select:none}
+/* Les boutons de notation restent visibles en bas de l'écran, même si le corrigé est long */
+#actions{position:sticky;bottom:0;padding-bottom:calc(10px + env(safe-area-inset-bottom,0px));background:linear-gradient(to top,var(--paper) 70%,transparent);z-index:3}
+#actions .rate,#actions .reveal{margin-top:10px}
+/* Écrans peu hauts (téléphone à l'horizontale) */
+@media (max-height:520px){
+  .face{min-height:200px}
+  .q{padding-block:8px;font-size:20px}
+  .ruled{padding-top:12px;padding-bottom:10px}
+  .wrap{padding-block:10px 30px}
+  .rate button{padding:8px 6px}
+}
+/* Tablettes : 4 colonnes de thèmes */
+@media (min-width:760px) and (max-width:1100px){.themes{grid-template-columns:repeat(4,1fr)}}
+
+.namefield select{font:inherit;font-size:16px;padding:5px 10px;border:1.5px solid var(--line);border-radius:8px;background:var(--paper);color:var(--ink);max-width:100%}
+.namefield select.need{border-color:var(--mid);box-shadow:0 0 0 2px color-mix(in srgb,var(--mid) 25%,transparent)}
+.namefield{flex-wrap:wrap}
+
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
+.chip{display:inline-flex;align-items:center;gap:5px;white-space:nowrap;max-width:100%;overflow:hidden;text-overflow:ellipsis;font-family:var(--f-mono);font-size:10.5px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-2);background:var(--card);border:1.5px solid var(--line);border-radius:999px;padding:3px 10px 3px 8px}
+.chip svg{color:var(--accent);flex:none}
+
+.mode.exam{border-color:var(--ink);box-shadow:inset 0 0 0 1px var(--ink)}
+.veille{justify-self:start;font-family:var(--f-mono);font-size:11px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--mid);border:1.5px solid var(--mid);border-radius:999px;padding:2px 10px}
+.opt.chosen{border-color:var(--accent);background:var(--card);background:color-mix(in srgb,var(--accent) 10%,var(--card))}
+.opt.chosen .l{background:var(--accent);color:var(--accent-ink)}
+.note20{font-size:clamp(56px,12vw,84px)!important;color:var(--accent)}
+.note20 small{font-size:.4em;color:var(--ink-2);margin-left:4px}
+.review-banner.today{margin-top:0;margin-bottom:14px;border-style:solid;border-color:var(--mid);background:var(--card);background:color-mix(in srgb,var(--mid) 8%,var(--card))}
+.review-banner.today .go{background:var(--mid);color:var(--card)}
+/* Construire un plan */
+.subj{display:grid;gap:10px;margin-top:14px}
+.skel{display:grid;gap:3px;margin-top:6px}
+.skel div{font-weight:700;font-size:15px}
+.skel b{font-family:var(--f-mono);color:var(--c-methode);margin-right:8px}
+.idea{background:var(--card);border:2px solid var(--line);border-radius:12px;padding:10px 12px;display:flex;gap:12px;align-items:center;margin-top:8px}
+.idea p{margin:0;flex:1;font-size:15px;line-height:1.4}
+.idea .why{display:block;font-size:13px;font-weight:700;color:var(--ko);margin-top:3px}
+.idea.right{border-color:var(--ok)}
+.idea.wrong{border-color:var(--ko)}
+.idea .seg button{min-width:40px;padding:6px 10px;font-size:14px}
+.idea .seg button[disabled]{cursor:default}
+.plan ul{margin:2px 0 0;padding-left:18px}
+@media (max-width:560px){.idea{flex-direction:column;align-items:stretch}.idea .seg{align-self:flex-end}}
+.mode.exam{grid-column:1/-1}
+</style>
+
+<main class="wrap" id="app" aria-live="polite"></main>
+<noscript><p style="padding:16px">Active JavaScript pour utiliser les flashcards.</p></noscript>
+<script>
+const THEMES = {
+  def:     {label:"Définitions",                 short:"Définition",  color:"var(--c-def)"},
+  dates:   {label:"Dates et repères",            short:"Date",        color:"var(--c-dates)"},
+  nazi:    {label:"L'Allemagne nazie",           short:"Allemagne",   color:"var(--c-nazi)"},
+  urss:    {label:"L'URSS de Staline",           short:"URSS",        color:"var(--c-urss)"},
+  totale:  {label:"Une guerre totale",           short:"Guerre totale", color:"var(--c-fp)"},
+  anea:    {label:"Anéantissement et bilan",     short:"Anéantissement", color:"var(--c-anea)"},
+  approf:  {label:"Comparer et composer",        short:"Composition", color:"var(--c-approf)"}
+};
+
+/* t = thème, g = groupe QCM, q = question, a = réponse, d = corrigé détaillé,
+   p = pour aller plus loin, s = réponse courte (QCM), k = année (frise), fl = libellé frise */
+const CARDS = [
+/* ================= DÉFINITIONS ================= */
+{id:"d1",t:"def",g:"def",q:"Définissez : <b>régime totalitaire</b>",a:"Dictature qui utilise la violence, la terreur et la propagande pour contrôler totalement la population.",d:"Retenez les 3 outils : <b>violence</b>, <b>terreur</b>, <b>propagande</b> → un <b>contrôle total</b>.",p:"Deux exemples du chapitre : l'Allemagne nazie d'Hitler et l'URSS de Staline.",s:"Dictature qui veut contrôler totalement la population par la violence, la terreur et la propagande"},
+{id:"d2",t:"def",g:"def",q:"Définissez : <b>propagande</b>",a:"Ensemble des moyens utilisés par un régime pour diffuser ses idées et convaincre la population.",d:"Allemagne : radio, cinéma, affiches, tableaux, parades grandioses. URSS : cinéma, slogans, affiches, statues.",s:"Moyens utilisés pour diffuser les idées du régime et convaincre la population"},
+{id:"d3",t:"def",g:"def",q:"Définissez : <b>culte de la personnalité</b>",a:"Propagande qui présente le chef comme un être exceptionnel, admiré et adoré du peuple.",d:"Hitler est le <i>Führer</i> (le guide) ; Staline est partout sur les affiches et les statues.",s:"Propagande qui présente le chef comme un être exceptionnel"},
+{id:"d4",t:"def",g:"def",q:"Définissez : <b>embrigadement</b>",a:"Encadrement de la population, surtout des jeunes, dans des organisations contrôlées par le régime.",d:"Allemagne : la <i>Hitlerjugend</i>. URSS : les pionniers.",s:"Encadrement de la population, surtout des jeunes, dans les organisations du régime"},
+{id:"d5",t:"def",g:"def",q:"Définissez : <b>endoctrinement</b>",a:"Fait d'imposer une idéologie à quelqu'un pour qu'il pense comme le régime.",d:"La <i>Hitlerjugend</i> endoctrine les enfants pour en faire des soldats.",s:"Imposer une idéologie pour que chacun pense comme le régime"},
+{id:"d6",t:"def",g:"def",q:"Définissez : <b>police politique</b>",a:"Police chargée de surveiller la population et d'arrêter les opposants au régime.",d:"Allemagne : la <b>Gestapo</b>. URSS : le <b>NKVD</b>.",s:"Police qui surveille la population et arrête les opposants"},
+{id:"d7",t:"def",g:"def",q:"Définissez : <b>camp de concentration</b>",a:"Camp où sont enfermés, dans des conditions terribles, les opposants et les personnes rejetées par le régime.",d:"Dans l'Allemagne nazie, ils servent d'abord à enfermer les opposants.",p:"Le premier camp nazi, Dachau, ouvre dès 1933.",s:"Camp où sont enfermés les opposants dans des conditions terribles"},
+{id:"d8",t:"def",g:"def",q:"Définissez : <b>camp d'extermination</b>",a:"Camp construit par les nazis pour tuer immédiatement et en masse, dans des chambres à gaz.",d:"Les corps sont brûlés dans des fours crématoires. Environ <b>3 millions de Juifs</b> y sont tués entre 1942 et 1945.",p:"Exemple : Auschwitz-Birkenau, en Pologne.",s:"Camp construit pour tuer en masse dans des chambres à gaz"},
+{id:"d9",t:"def",g:"def",q:"Définissez : <b>goulag</b>",a:"Administration (ministère) chargée des camps de travail forcé en URSS ; par extension, ces camps.",d:"Les camps du goulag font disparaître les opposants à Staline.",s:"Les camps de travail forcé de l'URSS"},
+{id:"d10",t:"def",g:"def",q:"Définissez : <b>collectivisation</b>",a:"Mise en commun forcée des terres et des moyens de production, qui deviennent propriété de l'État.",d:"Les paysans qui refusent (les <b>koulaks</b>) sont affamés par Staline, notamment en Ukraine.",s:"Mise en commun forcée des terres, qui deviennent propriété de l'État"},
+{id:"d11",t:"def",g:"def",q:"Définissez : <b>plan quinquennal</b>",a:"Plan de 5 ans dans lequel l'État fixe les objectifs de production de toute l'économie.",d:"C'est un outil de Staline pour instaurer le communisme.",s:"Plan de 5 ans qui fixe les objectifs de production"},
+{id:"d12",t:"def",g:"def",q:"Définissez : <b>espace vital</b>",a:"Territoires à l'est de l'Europe qu'Hitler veut conquérir pour le peuple allemand.",d:"Idée exposée dans <i>Mein Kampf</i>. Elle explique l'invasion de la Pologne (1939) puis de l'URSS (1941).",s:"Territoires à l'est qu'Hitler veut conquérir pour les Allemands"},
+{id:"d13",t:"def",g:"def",q:"Définissez : <b>antisémitisme</b>",a:"Haine des Juifs.",d:"Pour Hitler, les Juifs sont des « parasites » qui « souillent » la pureté du sang allemand.",s:"Haine des Juifs"},
+{id:"d14",t:"def",g:"def",q:"Définissez : <b>guerre totale</b>",a:"Guerre qui mobilise toutes les ressources des pays (hommes, économie, sciences, propagande) et touche aussi les civils.",d:"Environ <b>100 millions de soldats</b> ; les économies travaillent pour la guerre.",s:"Guerre qui mobilise toutes les ressources des pays et touche les civils"},
+{id:"d15",t:"def",g:"def",q:"Définissez : <b>guerre d'anéantissement</b>",a:"Guerre visant la destruction totale des forces militaires et des populations jugées ennemies.",d:"L'ennemi est <b>déshumanisé</b> : massacres de masse, bombardements des villes, extermination.",s:"Guerre qui vise la destruction totale de l'ennemi, militaires et civils"},
+{id:"d16",t:"def",g:"def",q:"Définissez : <b>massacre de masse</b>",a:"Fait de tuer de nombreuses personnes dans un court délai, généralement par fusillade.",d:"Exemple : les Einsatzgruppen à l'Est à partir de l'été 1941.",s:"Tuer de nombreuses personnes en peu de temps, souvent par fusillade"},
+{id:"d17",t:"def",g:"def",q:"Définissez : <b>génocide</b>",a:"Extermination volontaire et organisée d'un peuple en raison de son origine.",d:"Les nazis exterminent environ <b>5,7 millions de Juifs</b> (la Shoah) et <b>100 000 à 200 000 Tsiganes</b>.",s:"Extermination volontaire et organisée d'un peuple"},
+{id:"d18",t:"def",g:"def",q:"Définissez : <b>Shoah</b>",a:"Génocide des Juifs d'Europe par les nazis. Le mot hébreu signifie « catastrophe ».",d:"Environ <b>5,7 millions</b> de victimes : 1,5 million fusillées par les Einsatzgruppen, 3 millions dans les camps d'extermination.",s:"Génocide des Juifs d'Europe par les nazis"},
+{id:"d19",t:"def",g:"def",q:"Définissez : <b>bombardement urbain</b>",a:"Bombardement des villes, usines, routes et ponts pour affaiblir l'ennemi et miner le moral de la population.",d:"Pratiqué par les deux camps : l'Axe comme les Alliés.",s:"Bombarder villes, usines et ponts pour miner le moral de l'ennemi"},
+{id:"d20",t:"def",g:"def",q:"Définissez : <b>belligérant</b>",a:"Pays qui participe à la guerre.",s:"Pays qui participe à la guerre"},
+{id:"d21",t:"def",g:null,q:"Qui sont l'<b>Axe</b> et les <b>Alliés</b> ?",a:"L'Axe : Allemagne, Italie, Japon. Les Alliés : Royaume-Uni, URSS, États-Unis…",d:"L'opposition est aussi <b>idéologique</b> : chaque camp veut détruire l'autre."},
+{id:"r1",t:"def",g:"mot",q:"Quel mot désigne : « guerre qui mobilise toutes les ressources des pays et touche aussi les civils » ?",a:"La guerre totale.",s:"Guerre totale"},
+{id:"r2",t:"def",g:"mot",q:"Quel mot désigne : « guerre visant la destruction totale des militaires et des populations jugées ennemies » ?",a:"La guerre d'anéantissement.",s:"Guerre d'anéantissement"},
+{id:"r3",t:"def",g:"mot",q:"Quel mot désigne : « annexion de l'Autriche par l'Allemagne en 1938 » ?",a:"L'<i>Anschluss</i>.",s:"Anschluss"},
+{id:"r4",t:"def",g:"mot",q:"Quel mot désigne : « paysans soviétiques qui refusent la collectivisation » ?",a:"Les koulaks.",s:"Koulaks"},
+{id:"r5",t:"def",g:"mot",q:"Quel mot désigne : « haine des Juifs » ?",a:"L'antisémitisme.",s:"Antisémitisme"},
+{id:"r6",t:"def",g:"mot",q:"Quel mot désigne : « génocide des Juifs d'Europe par les nazis » ?",a:"La Shoah.",s:"Shoah"},
+
+/* ================= DATES ================= */
+{id:"t1",t:"dates",g:"date",q:"En quelle année est signé le <b>traité de Versailles</b>, rejeté par Hitler ?",a:"1919",d:"Hitler le viole en remilitarisant l'Allemagne (chars, avions…).",s:"1919",k:1919.5,fl:"Traité de Versailles"},
+{id:"t2",t:"dates",g:"date",q:"À partir de quand Staline instaure-t-il un <b>État totalitaire</b> en URSS ?",a:"1924",d:"Il s'impose à la tête du Parti communiste en éliminant les autres successeurs possibles de Lénine.",s:"1924",k:1924,fl:"Staline au pouvoir en URSS"},
+{id:"t3",t:"dates",g:"date",q:"Quand a lieu la grande <b>famine en Ukraine</b> provoquée par Staline ?",a:"1932-1933",d:"Les paysans qui refusent la collectivisation (koulaks) sont affamés.",p:"Les Ukrainiens appellent cette famine l'Holodomor.",s:"1932-1933",k:1932.5,fl:"Famine en Ukraine"},
+{id:"t4",t:"dates",g:"date",q:"Quand Hitler arrive-t-il <b>légalement</b> au pouvoir ?",a:"1933 (nommé chancelier le 30 janvier 1933)",d:"Il applique ensuite le programme de <i>Mein Kampf</i>.",s:"1933",k:1933.1,fl:"Hitler arrive au pouvoir"},
+{id:"t5",t:"dates",g:"date",q:"Quand l'Allemagne annexe-t-elle l'<b>Autriche</b> (<i>Anschluss</i>) ?",a:"1938",d:"Pour Hitler, le Grand Reich doit regrouper tous ceux qui parlent allemand.",s:"1938",k:1938.2,fl:"Anschluss (annexion de l'Autriche)"},
+{id:"t6",t:"dates",g:"date",q:"Quand l'Allemagne envahit-elle la <b>Pologne</b>, déclenchant la guerre ?",a:"1er septembre 1939",d:"Dès septembre 1939, l'élite polonaise est exterminée (opération Tannenberg).",s:"1er septembre 1939",k:1939.7,fl:"Invasion de la Pologne : début de la guerre"},
+{id:"t7",t:"dates",g:"date",q:"Quand l'Allemagne attaque-t-elle l'<b>URSS</b> (opération Barbarossa) ?",a:"22 juin 1941",d:"Les Einsatzgruppen suivent l'armée et assassinent les Juifs et les communistes : 1,5 million de victimes à partir de l'été 1941.",s:"22 juin 1941",k:1941.5,fl:"Opération Barbarossa (invasion de l'URSS)"},
+{id:"t8",t:"dates",g:"date",q:"Entre quelles dates fonctionnent les <b>camps d'extermination</b> nazis ?",a:"1942-1945",d:"Environ 3 millions de Juifs y sont tués (chambres à gaz, fours crématoires).",s:"1942-1945",k:1942.3,fl:"Les camps d'extermination fonctionnent"},
+{id:"t9",t:"dates",g:"date",q:"Quand l'armée allemande est-elle vaincue à <b>Stalingrad</b> ?",a:"Février 1943",d:"La 6e armée allemande capitule : c'est un tournant de la guerre à l'Est.",s:"Février 1943",k:1943.1,fl:"Défaite allemande à Stalingrad"},
+{id:"t10",t:"dates",g:"date",q:"Quand le camp d'<b>Auschwitz</b> est-il libéré par l'Armée rouge ?",a:"27 janvier 1945",d:"Les soldats soviétiques découvrent l'horreur du génocide.",s:"27 janvier 1945",k:1945.07,fl:"Libération d'Auschwitz"},
+{id:"t11",t:"dates",g:"date",q:"Quand l'Allemagne <b>capitule</b>-t-elle ?",a:"8 mai 1945",d:"Fin de la guerre en Europe. La guerre continue en Asie contre le Japon.",s:"8 mai 1945",k:1945.35,fl:"Capitulation de l'Allemagne"},
+{id:"t12",t:"dates",g:"date",q:"Quand les États-Unis lancent-ils les <b>bombes atomiques</b> sur Hiroshima et Nagasaki ?",a:"6 et 9 août 1945",d:"Le Japon capitule le 2 septembre 1945 : fin de la Seconde Guerre mondiale.",s:"6 et 9 août 1945",k:1945.6,fl:"Bombes atomiques sur Hiroshima et Nagasaki"},
+{id:"t13",t:"dates",g:"date",q:"Quand prennent fin les <b>tickets de rationnement</b> en France ?",a:"1949",d:"Preuve que la famine et les privations durent des années après la guerre.",s:"1949",k:1949,fl:"Fin du rationnement en France"},
+{id:"t14",t:"dates",g:null,q:"Que se passe-t-il le <b>1er septembre 1939</b> ?",a:"L'Allemagne envahit la Pologne : début de la Seconde Guerre mondiale.",d:"C'est l'application de l'« espace vital » à l'est."},
+{id:"t15",t:"dates",g:null,q:"Que se passe-t-il le <b>22 juin 1941</b> ?",a:"L'Allemagne attaque l'URSS : c'est l'opération Barbarossa.",d:"Début de la « Shoah par balles » menée par les Einsatzgruppen."},
+{id:"t16",t:"dates",g:null,q:"Que se passe-t-il le <b>6 août 1945</b> ?",a:"Les États-Unis lancent la première bombe atomique sur Hiroshima (Japon).",d:"Une seconde bombe frappe Nagasaki le 9 août. Le Japon capitule le 2 septembre 1945."},
+{id:"t17",t:"dates",g:null,q:"Quelles sont les dates de la <b>Seconde Guerre mondiale</b> ?",a:"1939-1945.",d:"Du 1er septembre 1939 (invasion de la Pologne) au 2 septembre 1945 (capitulation du Japon)."},
+
+/* ================= ALLEMAGNE NAZIE ================= */
+{id:"n1",t:"nazi",g:null,q:"Comment Hitler arrive-t-il au pouvoir ?",a:"Légalement, en 1933 : il est nommé chancelier le 30 janvier 1933.",d:"Il transforme ensuite l'Allemagne en régime totalitaire.",p:"Une démocratie peut être détruite de l'intérieur."},
+{id:"n2",t:"nazi",g:"qui",q:"Dans quel livre Hitler expose-t-il son programme ?",a:"<i>Mein Kampf</i> (« Mon combat »).",d:"Espace vital à l'est, supériorité de la « race aryenne », haine des Juifs.",s:"Mein Kampf"},
+{id:"n3",t:"nazi",g:null,q:"Quelles sont les grandes idées de l'<b>idéologie nazie</b> ?",a:"Les Aryens seraient une « race de seigneurs » qui doit dominer le monde pour 1000 ans ; les Juifs seraient des « parasites » ; les Allemands ont besoin d'un « espace vital » à l'est.",d:"Une idéologie <b>raciste</b>, <b>antisémite</b> et <b>nationaliste</b>."},
+{id:"n4",t:"nazi",g:"qui",q:"Quel titre prend Hitler, objet d'un culte de la personnalité ?",a:"Le <i>Führer</i> (le guide).",s:"Le Führer"},
+{id:"n5",t:"nazi",g:"qui",q:"Quelle organisation embrigade les enfants allemands ?",a:"La <i>Hitlerjugend</i> (Jeunesse hitlérienne).",d:"Elle les endoctrine pour en faire des soldats.",s:"La Hitlerjugend"},
+{id:"n6",t:"nazi",g:null,q:"Quels sont les moyens de la <b>propagande</b> nazie ?",a:"Radio, cinéma, affiches, tableaux, parades grandioses.",d:"La propagande est partout : elle célèbre le Führer et diffuse l'idéologie nazie."},
+{id:"n7",t:"nazi",g:"qui",q:"Comment s'appelle la police politique nazie ?",a:"La Gestapo.",d:"Elle surveille la population et arrête les opposants.",s:"La Gestapo"},
+{id:"n8",t:"nazi",g:"qui",q:"Quelles milices du parti nazi font régner la terreur dans les rues ?",a:"Les SA, puis les SS.",d:"Les SS dirigent ensuite les camps.",s:"Les SA puis les SS"},
+{id:"n9",t:"nazi",g:null,q:"Quels sont les deux types de camps nazis ?",a:"Les camps de concentration pour les opposants ; les camps d'extermination pour les « races inférieures ».",d:"Dachau, premier camp de concentration, ouvre dès 1933. Les camps d'extermination tuent surtout les Juifs, de 1942 à 1945."},
+{id:"n10",t:"nazi",g:null,q:"Comment Hitler prépare-t-il la guerre ?",a:"Il remilitarise l'Allemagne (chars, avions…), contre le traité de Versailles de 1919.",d:"Il annexe l'Autriche dès 1938 (<i>Anschluss</i>) pour construire le Grand Reich."},
+{id:"n11",t:"nazi",g:null,q:"Qu'est-ce que le <b>Grand Reich</b> voulu par Hitler ?",a:"Un État qui regrouperait tous ceux qui parlent allemand, avec un vaste espace vital à l'est.",d:"Première étape : l'<i>Anschluss</i> (annexion de l'Autriche) en 1938."},
+{id:"n12",t:"nazi",g:null,q:"Comment le régime nazi contrôle-t-il et réprime-t-il la population ? (3 moyens)",a:"Propagande et embrigadement (<i>Hitlerjugend</i>) ; police politique (Gestapo) et milices (SA, SS) ; camps de concentration et d'extermination.",d:"C'est le cœur du sujet 1 : <b>convaincre</b>, <b>surveiller</b>, <b>éliminer</b>."},
+
+/* ================= URSS ================= */
+{id:"u1",t:"urss",g:"qui",q:"Qui dirige l'URSS à partir de 1924 ?",a:"Staline.",d:"Il s'impose à la tête du Parti communiste.",s:"Staline"},
+{id:"u2",t:"urss",g:null,q:"Comment Staline s'impose-t-il au pouvoir ?",a:"Il élimine ses opposants parmi les successeurs possibles de Lénine.",d:"Il prend le pouvoir à l'intérieur du parti, sans élection libre.",p:"Différence avec Hitler, arrivé au pouvoir légalement."},
+{id:"u3",t:"urss",g:null,q:"Quel est le but affiché de Staline ?",a:"Instaurer le communisme : l'égalité de tous et la disparition des patrons.",d:"Pour cela : plans quinquennaux et collectivisation des terres."},
+{id:"u4",t:"urss",g:null,q:"Comment Staline contrôle-t-il l'<b>économie</b> ?",a:"Par les plans quinquennaux et la collectivisation des terres.",d:"Les paysans qui refusent (koulaks) sont affamés, notamment en Ukraine (1932-1933)."},
+{id:"u5",t:"urss",g:null,q:"Quels sont les moyens de la <b>propagande</b> stalinienne ?",a:"Cinéma, slogans, affiches, statues, grands rassemblements patriotiques.",d:"Ils diffusent le culte de Staline et l'idéologie communiste."},
+{id:"u6",t:"urss",g:"qui",q:"Quelle organisation encadre la jeunesse soviétique ?",a:"Les pionniers.",d:"C'est l'équivalent soviétique de la <i>Hitlerjugend</i>.",s:"Les pionniers"},
+{id:"u7",t:"urss",g:"qui",q:"Comment s'appelle la police politique de Staline ?",a:"Le NKVD.",d:"Il surveille, arrête et fait disparaître les opposants.",s:"Le NKVD"},
+{id:"u8",t:"urss",g:null,q:"Quel rôle joue la <b>dénonciation</b> en URSS ?",a:"Staline l'encourage, y compris par les enfants contre leurs parents.",d:"Chacun surveille tout le monde : la peur s'installe partout."},
+{id:"u9",t:"urss",g:null,q:"À quoi servent les camps du <b>goulag</b> ?",a:"À faire disparaître les opposants, soumis au travail forcé.",d:"Le Goulag est le ministère chargé de ces camps."},
+{id:"u10",t:"urss",g:null,q:"Qui sont les <b>koulaks</b> et que leur arrive-t-il ?",a:"Des paysans qui refusent la collectivisation ; Staline les affame (Ukraine).",d:"La famine de 1932-1933 fait des millions de morts."},
+{id:"u11",t:"urss",g:null,q:"Comment Staline contrôle-t-il et réprime-t-il la population ? (3 moyens)",a:"Propagande et encadrement de la jeunesse (pionniers) ; police politique (NKVD) et dénonciation ; camps du goulag et famine des koulaks.",d:"Même logique que l'Allemagne nazie : <b>convaincre</b>, <b>surveiller</b>, <b>éliminer</b>."},
+
+/* ================= GUERRE TOTALE ================= */
+{id:"g1",t:"totale",g:"chiffre",q:"Combien de soldats se sont battus pendant la Seconde Guerre mondiale ?",a:"Environ 100 millions.",d:"Jamais autant d'hommes n'avaient été mobilisés.",s:"Environ 100 millions"},
+{id:"g2",t:"totale",g:null,q:"Comment l'<b>économie</b> est-elle mobilisée ?",a:"Les belligérants mettent tout leur appareil industriel au service de la guerre.",d:"Les usines produisent des armes, des chars, des avions, des munitions."},
+{id:"g3",t:"totale",g:null,q:"Comment les <b>civils</b> participent-ils à la guerre ?",a:"Ils participent à l'effort de guerre (travail dans les usines…), encouragés par une intense propagande.",d:"Dans une guerre totale, toute la société est mobilisée."},
+{id:"g4",t:"totale",g:null,q:"Qu'est-ce que la <b>course à l'armement</b> ?",a:"Chaque pays modernise ses armes pour avoir un avantage sur l'ennemi.",d:"Outils de détection (radar, sonar) et armes plus meurtrières : missile V2, bombe atomique."},
+{id:"g5",t:"totale",g:"mot",q:"Comment s'appelle le missile mis au point par l'Allemagne ?",a:"Le V2.",s:"V2"},
+{id:"g6",t:"totale",g:"mot",q:"Quels outils de détection sont mis au point pendant la guerre ?",a:"Le radar et le sonar.",s:"Radar et sonar"},
+{id:"g7",t:"totale",g:"qui",q:"Quelles villes japonaises sont détruites par la bombe atomique ?",a:"Hiroshima (6 août 1945) et Nagasaki (9 août 1945).",d:"Le Japon capitule le 2 septembre 1945.",s:"Hiroshima et Nagasaki"},
+{id:"g8",t:"totale",g:null,q:"Qui sont les <b>kamikazes</b> ?",a:"Des pilotes japonais qui lancent leur avion chargé d'explosifs sur les navires ennemis.",d:"Exemple : la bataille d'Okinawa (1945). Ils montrent la mobilisation totale de la société japonaise."},
+{id:"g9",t:"totale",g:null,q:"Pourquoi la Seconde Guerre mondiale est-elle une <b>guerre totale</b> ? (3 arguments)",a:"Mobilisation des hommes (100 millions de soldats), de l'économie (industrie de guerre) et des civils (effort de guerre, propagande) ; course à l'armement.",d:"C'est la partie I du sujet 2."},
+
+/* ================= ANÉANTISSEMENT ET BILAN ================= */
+{id:"e1",t:"anea",g:null,q:"Pourquoi la guerre est-elle aussi un <b>conflit idéologique</b> ?",a:"L'Axe et les Alliés s'opposent par leurs idées : le but est de détruire totalement l'adversaire.",d:"L'ennemi est <b>déshumanisé</b> : on parle de guerre d'anéantissement."},
+{id:"e2",t:"anea",g:null,q:"Qui commet des <b>massacres de masse</b> ?",a:"Les Allemands, les Soviétiques et les Japonais.",d:"Massacre de masse = tuer de nombreuses personnes en peu de temps, souvent par fusillade."},
+{id:"e3",t:"anea",g:null,q:"Qui pratique les <b>bombardements urbains</b>, et dans quel but ?",a:"Les Alliés comme les forces de l'Axe, pour détruire routes, ponts, usines et villes et miner le moral de l'adversaire.",d:"Les civils sont des cibles.",p:"Exemples : Londres bombardée par l'Allemagne (1940-1941), Hiroshima et Nagasaki (1945)."},
+{id:"e4",t:"anea",g:"qui",q:"Quelle opération extermine l'élite polonaise dès septembre 1939 ?",a:"L'opération Tannenberg.",d:"Les nazis mènent une « purification ethnique » des territoires conquis.",s:"L'opération Tannenberg"},
+{id:"e5",t:"anea",g:"qui",q:"Qui sont les commandos chargés de l'assassinat de masse des civils à l'Est ?",a:"Les Einsatzgruppen.",d:"Ils exécutent les communistes et les Juifs, sans distinction d'âge ni de sexe.",s:"Les Einsatzgruppen"},
+{id:"e6",t:"anea",g:"chiffre",q:"Combien de personnes les Einsatzgruppen assassinent-ils à partir de l'été 1941 ?",a:"Près de 1,5 million.",d:"On parle de « Shoah par balles ».",s:"Près de 1,5 million"},
+{id:"e7",t:"anea",g:"chiffre",q:"Combien de Juifs sont victimes du génocide nazi ?",a:"Près de 5,7 millions.",d:"Dont 3 millions dans les camps d'extermination (1942-1945).",s:"Près de 5,7 millions"},
+{id:"e8",t:"anea",g:"chiffre",q:"Combien de Juifs sont tués dans les camps d'extermination ?",a:"Environ 3 millions, entre 1942 et 1945.",d:"Ils sont tués dans des chambres à gaz ; les corps sont brûlés dans des fours crématoires.",s:"Environ 3 millions"},
+{id:"e9",t:"anea",g:"chiffre",q:"Combien de Tsiganes sont tués par les nazis ?",a:"Entre 100 000 et 200 000.",s:"100 000 à 200 000"},
+{id:"e10",t:"anea",g:"chiffre",q:"Quel est le bilan humain mondial de la Seconde Guerre mondiale ?",a:"Entre 50 et 70 millions de morts, dont plus de la moitié de civils.",d:"C'est la guerre la plus meurtrière de l'histoire.",s:"50 à 70 millions de morts"},
+{id:"e11",t:"anea",g:null,q:"Quelles sont les conséquences humaines <b>après</b> la guerre ?",a:"Des dizaines de millions de réfugiés errent sur les routes ; la famine continue pendant des années en Europe et en Asie.",d:"En France, les tickets de rationnement ne disparaissent qu'en 1949."},
+{id:"e12",t:"anea",g:null,q:"Que découvre l'Armée rouge le <b>27 janvier 1945</b> ?",a:"Le camp d'Auschwitz, qu'elle libère.",d:"Elle découvre l'horreur du génocide des Juifs."},
+{id:"e13",t:"anea",g:null,q:"Pourquoi la Seconde Guerre mondiale est-elle une <b>guerre d'anéantissement</b> ? (3 arguments)",a:"Un conflit idéologique où l'ennemi est déshumanisé ; des massacres de masse et des bombardements urbains ; une politique d'extermination (Tannenberg, Einsatzgruppen, Shoah).",d:"C'est la partie II du sujet 2."},
+
+/* ================= COMPARER ET COMPOSER ================= */
+{id:"a1",t:"approf",g:null,q:"Quels sont les <b>points communs</b> entre l'Allemagne nazie et l'URSS de Staline ?",a:"Un chef adulé, une idéologie imposée par la propagande, l'embrigadement de la jeunesse, une police politique, des camps.",d:"Ce sont deux <b>régimes totalitaires</b>."},
+{id:"a2",t:"approf",g:null,q:"Quelle est la grande différence d'<b>idéologie</b> ?",a:"Le communisme veut l'égalité de tous ; le nazisme affirme l'inégalité des « races ».",d:"Les victimes diffèrent : opposants et koulaks en URSS ; opposants, Juifs et Tsiganes en Allemagne."},
+{id:"a3",t:"approf",g:null,q:"Quelle différence dans la <b>prise du pouvoir</b> ?",a:"Hitler arrive légalement au pouvoir en 1933 ; Staline s'impose en 1924 en éliminant ses rivaux dans le parti.",d:"Deux chemins différents, le même résultat : un pouvoir totalitaire."},
+{id:"a4",t:"approf",g:null,q:"Comment les régimes totalitaires conduisent-ils à la violence extrême de la guerre ?",a:"Leur idéologie appelle à la conquête (espace vital) et déshumanise l'ennemi ; ils pratiquent déjà la terreur et les camps avant 1939.",d:"C'est la problématique du chapitre."},
+{id:"a5",t:"approf",g:null,q:"Quelle différence entre <b>guerre totale</b> et <b>guerre d'anéantissement</b> ?",a:"La guerre totale mobilise toutes les ressources ; la guerre d'anéantissement vise à détruire totalement l'ennemi, civils compris.",d:"La Seconde Guerre mondiale est les deux à la fois."},
+{id:"a6",t:"approf",g:null,q:"Quelles sont les 4 étapes d'une <b>introduction</b> ?",a:"Une accroche ; la présentation du sujet (définitions, dates) ; la problématique ; l'annonce du plan.",d:"Rédigez l'introduction au brouillon."},
+{id:"a7",t:"approf",g:null,q:"Donnez une <b>accroche</b> possible pour le sujet sur la Seconde Guerre mondiale.",a:"« Entre 50 et 70 millions de morts, dont plus de la moitié de civils : c'est la guerre la plus meurtrière de l'histoire. »",d:"Une accroche peut être un chiffre, une citation, un fait marquant."},
+{id:"a8",t:"approf",g:null,q:"Quels exemples précis citer pour prouver la <b>répression</b> dans les deux régimes ?",a:"Gestapo, SA et SS, camps de concentration (Dachau, 1933) ; NKVD, dénonciation, goulag, famine des koulaks (1932-1933).",d:"Un bon devoir contient des <b>noms</b>, des <b>dates</b> et des <b>chiffres</b>."},
+{id:"a9",t:"approf",g:null,q:"Quels exemples précis citer pour prouver la <b>guerre d'anéantissement</b> ?",a:"Opération Tannenberg (1939), Einsatzgruppen (1,5 million de victimes dès 1941), Shoah (5,7 millions), bombardements urbains, Hiroshima et Nagasaki.",d:"Toujours un exemple daté et chiffré par argument."},
+{id:"a10",t:"approf",g:null,q:"Que doit contenir la <b>conclusion</b> ?",a:"Une réponse claire à la problématique qui résume les parties, puis éventuellement une ouverture.",d:"Ouverture possible : le procès de Nuremberg (1945-1946) ou la création de l'ONU (1945)."}
+];
+
+const BADGES = [
+  {id:"first",  name:"Premières fiches",    desc:"Réviser 10 cartes.",                         icon:"card"},
+  {id:"hundred",name:"Centurion des fiches",desc:"Réviser 100 cartes.",                        icon:"stack"},
+  {id:"streak5",name:"En série",            desc:"5 bonnes réponses d'affilée.",               icon:"bolt"},
+  {id:"streak15",name:"Inarrêtable",        desc:"15 bonnes réponses d'affilée.",              icon:"bolt2"},
+  {id:"comeback",name:"Persévérant",        desc:"Réussir 10 cartes que vous aviez ratées.",   icon:"loop"},
+  {id:"m_def",  name:"Dictionnaire vivant", desc:"Maîtriser 80 % des définitions.",            icon:"book"},
+  {id:"m_dates",name:"Chronologiste",       desc:"Maîtriser 80 % des dates.",                  icon:"clock"},
+  {id:"m_nazi", name:"Spécialiste de l'Allemagne",desc:"Maîtriser 80 % des cartes Allemagne nazie.",icon:"shield"},
+  {id:"m_urss", name:"Spécialiste de l'URSS",desc:"Maîtriser 80 % des cartes URSS.",           icon:"star"},
+  {id:"m_totale",name:"Stratège",           desc:"Maîtriser 80 % des cartes « Guerre totale ».", icon:"target"},
+  {id:"m_anea", name:"Devoir de mémoire",   desc:"Maîtriser 80 % des cartes « Anéantissement et bilan ».", icon:"pin"},
+  {id:"m_approf",name:"Plume affûtée",      desc:"Maîtriser 80 % des cartes « Comparer et composer ».",icon:"pen"},
+  {id:"qcm10",  name:"Sans faute",          desc:"Faire 10/10 au défi QCM.",                   icon:"target"},
+  {id:"frise1", name:"Maître du temps",     desc:"Réussir une frise sans erreur.",             icon:"line"},
+  {id:"frise3", name:"Horloger",            desc:"Réussir 3 frises sans erreur.",              icon:"line2"},
+  {id:"days3",  name:"Régulier",            desc:"Réviser 3 jours différents.",                icon:"cal"},
+  {id:"ready",  name:"Prêt pour le contrôle",desc:"Atteindre 70 % de maîtrise globale.",       icon:"check"},
+  {id:"master", name:"Historien accompli",  desc:"Maîtriser 100 % des cartes.",                icon:"crown"}
+];
+
+/* Niveaux calculés sur la maîtrise globale (le % « prêt pour l'évaluation ») */
+const LEVELS = [
+  [0,"Je découvre le chapitre"],[.15,"Apprenti historien"],[.45,"Presque prêt"],
+  [.70,"Prêt pour le contrôle"],[.90,"Expert du chapitre"],[.999,"Légende du H1"]
+];
+
+/* ===== ÉVALUATION BLANCHE : questions essentielles (d'après la fiche de révision) =====
+   ok = bonne réponse, x = 3 mauvaises réponses, c = carte liée (revient dans « à revoir » si ratée) */
+const ESSENTIELS = {
+  nazi: [
+    {t:"nazi", c:"n1", q:"Comment Hitler arrive-t-il au pouvoir ?", ok:"Légalement, en 1933 : il est nommé chancelier", x:["Par un coup d'État militaire en 1924","En succédant à Lénine","Après une guerre civile en 1939"]},
+    {t:"nazi", c:"n3", q:"Quelle idée appartient à l'idéologie nazie ?", ok:"Les Allemands ont besoin d'un « espace vital » à l'est", x:["Tous les hommes sont égaux, les patrons doivent disparaître","Les terres doivent être collectivisées","Le pouvoir appartient au peuple qui vote librement"]},
+    {t:"nazi", c:"n6", q:"Quels sont les moyens de la propagande nazie ?", ok:"Radio, cinéma, affiches, tableaux, parades grandioses", x:["Élections libres et presse indépendante","Plans quinquennaux et kolkhozes","Radar, sonar et missiles V2"]},
+    {t:"nazi", c:"n9", q:"À qui sont destinés les camps d'extermination nazis ?", ok:"Aux « races inférieures », d'abord les Juifs", x:["Aux soldats alliés faits prisonniers","Aux koulaks ukrainiens","Aux membres du parti nazi"]},
+    {t:"nazi", c:"n10", q:"Comment Hitler prépare-t-il la guerre ?", ok:"Il remilitarise l'Allemagne contre le traité de Versailles", x:["Il désarme l'Allemagne","Il collectivise les terres","Il s'allie avec la France et le Royaume-Uni"]},
+    {card:"n5"}, {card:"n7"}, {card:"n8"}, {card:"n2"}
+  ],
+  urss: [
+    {t:"urss", c:"u2", q:"Comment Staline s'impose-t-il au pouvoir ?", ok:"En éliminant ses opposants parmi les successeurs de Lénine", x:["Il gagne des élections libres en 1933","Il est nommé chancelier par le président","Il est élu par les pionniers"]},
+    {t:"urss", c:"u4", q:"Comment Staline contrôle-t-il l'économie ?", ok:"Plans quinquennaux et collectivisation des terres", x:["Libre concurrence et entreprises privées","Remilitarisation contre le traité de Versailles","Grands travaux financés par les banques"]},
+    {t:"urss", c:"u8", q:"Quel moyen de contrôle Staline encourage-t-il, même chez les enfants ?", ok:"La dénonciation", x:["Le vote libre","La grève","La liberté de la presse"]},
+    {t:"urss", c:"u10", q:"Que subissent les koulaks qui refusent la collectivisation ?", ok:"Ils sont affamés par Staline (Ukraine)", x:["Ils reçoivent des terres","Ils deviennent membres du NKVD","Ils sont envoyés dans la Hitlerjugend"]},
+    {t:"urss", c:"u5", q:"Quels sont les moyens de la propagande stalinienne ?", ok:"Cinéma, slogans, affiches, statues, grands rassemblements", x:["Parades de la Hitlerjugend","Élections libres et pluralisme","Radar et sonar"]},
+    {card:"u6"}, {card:"u7"}, {card:"u1"}
+  ],
+  totale: [
+    {t:"totale", c:"g2", q:"Comment l'économie est-elle mobilisée pendant la guerre ?", ok:"Tout l'appareil industriel est mis au service de la guerre", x:["Les usines ferment pendant la guerre","Seule l'agriculture est mobilisée","Les pays neutres produisent toutes les armes"]},
+    {t:"totale", c:"g3", q:"Comment les civils participent-ils à la guerre totale ?", ok:"Par l'effort de guerre, encouragés par une intense propagande", x:["Ils ne sont pas concernés","Ils votent pour ou contre la guerre","Ils sont tous envoyés au front"]},
+    {t:"totale", c:"g4", q:"Quelles armes nouvelles montrent la course à l'armement ?", ok:"Le missile V2 et la bombe atomique", x:["L'arc et l'arbalète","Le canon de 75 et les tranchées","Le char Renault FT de 1918"]},
+    {card:"g1"}, {card:"g7"}, {card:"g5"}
+  ],
+  anea: [
+    {t:"anea", c:"e1", q:"Pourquoi parle-t-on de guerre d'anéantissement ?", ok:"Le but est de détruire totalement l'ennemi, militaires et civils", x:["La guerre est très courte","Les combats ont lieu seulement en mer","Seuls les soldats sont visés"]},
+    {t:"anea", c:"e3", q:"Qui pratique les bombardements urbains ?", ok:"Les Alliés comme les forces de l'Axe", x:["Seulement l'Allemagne","Seulement les États-Unis","Aucun belligérant"]},
+    {t:"anea", c:"e5", q:"Que font les Einsatzgruppen à l'Est à partir de 1941 ?", ok:"Ils assassinent les Juifs et les communistes, sans distinction d'âge ni de sexe", x:["Ils construisent des usines d'armement","Ils libèrent les camps","Ils encadrent la jeunesse soviétique"]},
+    {t:"anea", c:"e11", q:"Quelle conséquence humaine dure après 1945 ?", ok:"Des dizaines de millions de réfugiés et la famine", x:["Une forte hausse de la population","La fin immédiate des privations","Le retour de tous les réfugiés en 1945"]},
+    {card:"e7"}, {card:"e10"}, {card:"e8"}, {card:"e4"}, {card:"e6"}
+  ],
+  approf: [
+    {t:"approf", c:"a1", q:"Quel est le point commun entre l'Allemagne nazie et l'URSS de Staline ?", ok:"Propagande, embrigadement, police politique et camps", x:["Des élections libres avec plusieurs partis","La liberté de la presse","Exactement la même idéologie"]},
+    {t:"approf", c:"a2", q:"Quelle est la grande différence entre le communisme et le nazisme ?", ok:"Le communisme veut l'égalité ; le nazisme affirme l'inégalité des « races »", x:["Le communisme est raciste ; le nazisme veut l'égalité","Le communisme est une démocratie ; le nazisme aussi","Il n'y a aucune différence"]},
+    {t:"approf", c:"a6", q:"Que contient une introduction de composition ?", ok:"Accroche, présentation du sujet, problématique, annonce du plan", x:["Uniquement la problématique","Le résumé de toutes les parties","Une liste de dates sans phrases"]}
+  ],
+  // Définitions et dates de la fiche (cartes de l'appli)
+  def: ["d1","d2","d3","d4","d6","d8","d9","d10","d12","d14","d15","d17","d18"],
+  dates: ["t2","t3","t4","t5","t6","t7","t8","t11","t12"]
+};
+// Composition d'une évaluation blanche (20 questions)
+const EXAM_PLAN = {def:6, dates:4, nazi:2, urss:2, totale:2, anea:3, approf:1};
+
+
+/* ================= SUJETS POSSIBLES (rubrique « Construire un plan ») =================
+   p = partie (0 = I, 1 = II, 2 = III), p:-1 = idée hors sujet, w = pourquoi elle est hors sujet */
+const PLANS = [
+{s:"Comment les régimes totalitaires nazi en Allemagne et stalinien en URSS ont-ils organisé le contrôle et la répression des populations ?",
+ intro:"Un régime totalitaire est une dictature qui utilise la violence, la terreur et la propagande pour contrôler totalement la population. Staline instaure ce régime en URSS dès 1924 ; Hitler arrive légalement au pouvoir en Allemagne en 1933. Comment ces deux régimes ont-ils organisé le contrôle et la répression des populations ? Nous verrons qu'ils cherchent à convaincre, puis à surveiller, enfin à éliminer.",
+ parts:["Convaincre : propagande et embrigadement","Surveiller : polices politiques et terreur","Éliminer : camps de concentration, d'extermination et goulag"],
+ ideas:[
+  {t:"Culte du chef : Hitler, le Führer ; Staline adulé sur affiches et statues",p:0},
+  {t:"Propagande nazie : radio, cinéma, affiches, parades grandioses",p:0},
+  {t:"Propagande stalinienne : cinéma, slogans, affiches, statues, rassemblements",p:0},
+  {t:"Jeunesse embrigadée : Hitlerjugend en Allemagne, pionniers en URSS",p:0},
+  {t:"Gestapo et milices SA puis SS dans les rues en Allemagne",p:1},
+  {t:"NKVD et dénonciation encouragée, même par les enfants, en URSS",p:1},
+  {t:"Camps de concentration nazis pour les opposants (Dachau, 1933)",p:2},
+  {t:"Camps d'extermination pour les « races inférieures », surtout les Juifs",p:2},
+  {t:"Goulag : les opposants à Staline disparaissent",p:2},
+  {t:"Koulaks affamés en Ukraine (1932-1933)",p:2},
+  {t:"Le missile V2 et la bombe atomique",p:-1,w:"c'est la course à l'armement pendant la guerre (sujet 2), pas le contrôle des populations."}
+ ],
+ concl:"Les régimes nazi et stalinien contrôlent toute la population par la propagande, la surveillance et la terreur, jusqu'à l'élimination de millions de personnes. Cette violence se déchaîne ensuite dans la Seconde Guerre mondiale."},
+{s:"En quoi la Seconde Guerre mondiale a-t-elle été une guerre totale et d'anéantissement ?",
+ intro:"« Entre 50 et 70 millions de morts » : la Seconde Guerre mondiale (1939-1945) est la plus meurtrière de l'histoire. Elle oppose l'Axe (Allemagne, Italie, Japon) aux Alliés. En quoi a-t-elle été une guerre totale et d'anéantissement ? Nous verrons qu'elle mobilise toutes les ressources, qu'elle cherche à détruire l'ennemi, et qu'elle laisse un bilan humain inédit.",
+ parts:["Une guerre totale : mobiliser toutes les ressources","Une guerre d'anéantissement : détruire l'ennemi","Un bilan humain d'une ampleur inédite"],
+ ideas:[
+  {t:"Environ 100 millions de soldats mobilisés",p:0},
+  {t:"Industrie et économie au service de la guerre ; civils dans l'effort de guerre",p:0},
+  {t:"Propagande intense dans tous les pays",p:0},
+  {t:"Course à l'armement : radar, sonar, missile V2, bombe atomique",p:0},
+  {t:"Conflit idéologique : l'ennemi est déshumanisé",p:1},
+  {t:"Massacres de masse et bombardements urbains par l'Axe comme par les Alliés",p:1},
+  {t:"Opération Tannenberg (1939) ; Einsatzgruppen : 1,5 million de victimes dès 1941",p:1},
+  {t:"Shoah : 5,7 millions de Juifs, dont 3 millions dans les camps d'extermination",p:2},
+  {t:"100 000 à 200 000 Tsiganes tués",p:2},
+  {t:"50 à 70 millions de morts, plus de la moitié de civils ; réfugiés et famine",p:2},
+  {t:"La Hitlerjugend embrigade les enfants",p:-1,w:"c'est le contrôle de la population par le régime nazi avant la guerre (sujet 1)."}
+ ],
+ concl:"La Seconde Guerre mondiale est une guerre totale, qui mobilise toutes les sociétés, et une guerre d'anéantissement, qui vise des peuples entiers. Après 1945, les vainqueurs jugent les crimes nazis au procès de Nuremberg."}
+];
+
+const ROMAN = ["I","II","III"];
+function planHtml(p){
+  return `<div class="plan"><div class="pl-i"><b>Introduction</b>${p.intro}</div>` +
+    p.parts.map((t, i) => `<div class="pl-p"><b>${ROMAN[i]}. ${t}</b><ul>${p.ideas.filter(x => x.p === i).map(x => `<li>${x.t}</li>`).join("")}</ul></div>`).join("") +
+    `<div class="pl-i"><b>Conclusion</b>${p.concl}</div></div>`;
+}
+
+(function(){
+"use strict";
+const KEY = "h1-totalitarismes-2gm-tstmg-v1";
+
+const $ = s => document.querySelector(s);
+const app = $("#app");
+const byId = Object.fromEntries(CARDS.map(c => [c.id, c]));
+
+/* ---------- Sauvegarde ---------- */
+function fresh(){ return {name:"", xp:0, cards:{}, badges:{}, days:[], reviewed:0, bestStreak:0, comeback:0, frisePerfect:0, sel:Object.keys(THEMES), size:20}; }
+let S = fresh();
+try { const raw = localStorage.getItem(KEY); if (raw) S = Object.assign(fresh(), JSON.parse(raw)); } catch(e) {}
+function save(){ try { localStorage.setItem(KEY, JSON.stringify(S)); } catch(e) {} }
+
+/* ---------- Outils ---------- */
+const shuffle = a => { a = a.slice(); for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; };
+const box = id => (S.cards[id] || {}).b || 0;
+const cardScore = id => { const b = box(id); return b <= 1 ? 0 : b === 2 ? .4 : b === 3 ? .7 : 1; };
+const mastery = list => list.length ? list.reduce((s, c) => s + cardScore(c.id), 0) / list.length : 0;
+const inTheme = t => CARDS.filter(c => c.t === t);
+const pct = x => Math.round(x * 100);
+const today = () => { const d = new Date(); return d.getFullYear() + "-" + String(d.getMonth() + 1).padStart(2, "0") + "-" + String(d.getDate()).padStart(2, "0"); };
+const esc = s => String(s).replace(/[&<>"]/g, m => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[m]));
+const strip = s => String(s).replace(/<[^>]+>/g, "");
+
+function level(){
+  const xp = mastery(CARDS);
+  let i = 0; for (let k = 0; k < LEVELS.length; k++) if (xp >= LEVELS[k][0]) i = k;
+  // un niveau atteint reste acquis, même si la maîtrise baisse
+  if (i > (S.lvl || 0)) { S.lvl = i; save(); }
+  i = Math.max(i, S.lvl || 0);
+  const cur = LEVELS[i][0], next = LEVELS[i + 1] ? LEVELS[i + 1][0] : null;
+  return {n:i + 1, name:LEVELS[i][1], cur, next, p: next ? Math.max(0, Math.min(1, (xp - cur) / (next - cur))) : 1};
+}
+function dayStreak(){
+  const set = new Set(S.days); let n = 0; const d = new Date();
+  if (!set.has(today())) d.setDate(d.getDate() - 1);
+  while (true) {
+    const k = d.getFullYear() + "-" + String(d.getMonth() + 1).padStart(2, "0") + "-" + String(d.getDate()).padStart(2, "0");
+    if (set.has(k)) { n++; d.setDate(d.getDate() - 1); } else break;
+  }
+  return n;
+}
+function markDay(){ const t = today(); if (!S.days.includes(t)) S.days.push(t); }
+const tomorrow = () => { const d = new Date(); d.setDate(d.getDate() + 1); return d.getFullYear() + "-" + String(d.getMonth() + 1).padStart(2, "0") + "-" + String(d.getDate()).padStart(2, "0"); };
+// Cartes à revoir aujourd'hui : ratées (ou « presque ») lors d'un jour précédent et pas encore réussies depuis
+const dueIds = () => CARDS.filter(c => { const r = S.cards[c.id]; if (!r) return false; return r.due ? r.due <= today() : r.b === 1; }).map(c => c.id);
+const failedIds = dueIds;
+
+/* ---------- Icônes ---------- */
+const P = {
+  card:'<rect x="4" y="6" width="16" height="12" rx="2"/><path d="M8 10h8M8 14h5"/>',
+  stack:'<rect x="6" y="8" width="14" height="11" rx="2"/><path d="M4 15V6a2 2 0 0 1 2-2h10"/>',
+  bolt:'<path d="M13 3 5 14h6l-1 7 8-11h-6z"/>',
+  bolt2:'<path d="M11 2 4 12h5l-1 6 6-9H9z"/><path d="M17 9l-3 5h3l-1 4 4-6h-3z"/>',
+  loop:'<path d="M4 12a8 8 0 0 1 14-5l2 2M20 12a8 8 0 0 1-14 5l-2-2"/><path d="M20 4v5h-5M4 20v-5h5"/>',
+  book:'<path d="M4 5a2 2 0 0 1 2-2h13v16H6a2 2 0 0 0-2 2z"/><path d="M4 19V5M9 7h6"/>',
+  clock:'<circle cx="12" cy="12" r="8"/><path d="M12 8v4l3 2"/>',
+  star:'<path d="m12 3 2.6 5.6 6 .7-4.5 4.1 1.2 6L12 16.4 6.7 19.4l1.2-6L3.4 9.3l6-.7z"/>',
+  shield:'<path d="M12 3 5 6v6c0 4 3 7 7 9 4-2 7-5 7-9V6z"/><path d="m9 12 2 2 4-4"/>',
+  sun:'<circle cx="12" cy="12" r="4"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M5 5l2 2M17 17l2 2M5 19l2-2M17 7l2-2"/>',
+  scale:'<path d="M12 4v16M6 20h12M5 8h14"/><path d="m5 8-3 6h6zM19 8l-3 6h6z"/>',
+  pen:'<path d="m4 20 4-1 11-11-3-3L5 16z"/><path d="m14 7 3 3"/>',
+  target:'<circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="4"/><circle cx="12" cy="12" r=".8"/>',
+  line:'<path d="M3 12h18"/><circle cx="6" cy="12" r="2"/><circle cx="12" cy="12" r="2"/><circle cx="18" cy="12" r="2"/>',
+  line2:'<path d="M3 8h18M3 16h18"/><circle cx="7" cy="8" r="2"/><circle cx="16" cy="8" r="2"/><circle cx="11" cy="16" r="2"/>',
+  cal:'<rect x="4" y="5" width="16" height="15" rx="2"/><path d="M4 10h16M9 3v4M15 3v4"/>',
+  check:'<circle cx="12" cy="12" r="9"/><path d="m8 12 3 3 5-6"/>',
+  crown:'<path d="m3 8 4 4 5-7 5 7 4-4-2 11H5z"/>',
+  flip:'<path d="M4 7h11a5 5 0 0 1 0 10H9"/><path d="m8 3-4 4 4 4"/>',
+  quiz:'<circle cx="12" cy="12" r="9"/><path d="M9.5 9.5a2.5 2.5 0 1 1 3.5 2.3c-.6.3-1 .9-1 1.6v.6M12 17h.01"/>',
+  arrow:'<path d="M5 12h14M13 6l6 6-6 6"/>',
+  back:'<path d="M19 12H5M11 6l-6 6 6 6"/>',
+  medal:'<circle cx="12" cy="14" r="6"/><path d="M8 3h8l-2 5h-4z"/>',
+  pin:'<path d="M12 21s-6-5.6-6-11a6 6 0 0 1 12 0c0 5.4-6 11-6 11z"/><circle cx="12" cy="10" r="2.2"/>',
+  user:'<circle cx="12" cy="8" r="3.5"/><path d="M5 20c1-3.6 3.8-5.5 7-5.5s6 1.9 7 5.5"/>',
+  fire:'<path d="M12 21c-4 0-7-3-7-7 0-3 2-5 3-7 1 2 2 3 3 3 0-3 1-5 3-7 1 3 5 6 5 11 0 4-3 7-7 7z"/>'
+};
+const ico = (n, sz) => `<svg viewBox="0 0 24 24" width="${sz||20}" height="${sz||20}" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${P[n]||""}</svg>`;
+const medal = (b, locked) => `<div class="medal${locked ? " locked" : ""}"><div class="disc">${ico(b.icon, 30)}</div></div>`;
+
+/* ---------- Badges ---------- */
+function checkBadges(ctx){
+  ctx = ctx || {};
+  const got = [];
+  const give = id => { if (!S.badges[id]) { S.badges[id] = today(); got.push(BADGES.find(b => b.id === id)); } };
+  if (S.reviewed >= 10) give("first");
+  if (S.reviewed >= 100) give("hundred");
+  if (S.bestStreak >= 5) give("streak5");
+  if (S.bestStreak >= 15) give("streak15");
+  if (S.comeback >= 10) give("comeback");
+  for (const t of Object.keys(THEMES)) if (mastery(inTheme(t)) >= .8) give("m_" + t);
+  if (ctx.qcmPerfect) give("qcm10");
+  if (S.frisePerfect >= 1) give("frise1");
+  if (S.frisePerfect >= 3) give("frise3");
+  if (S.days.length >= 3) give("days3");
+  const g = mastery(CARDS);
+  if (g >= .7) give("ready");
+  if (g >= .999) give("master");
+  if (got.length) { save(); got.forEach((b, i) => setTimeout(() => toast(b), i * 2600)); }
+}
+let toastEl;
+function toast(b){
+  if (!toastEl) { toastEl = document.createElement("div"); toastEl.className = "toast"; toastEl.setAttribute("role", "status"); document.body.appendChild(toastEl); }
+  toastEl.innerHTML = medal(b) + `<div><small>Badge débloqué</small><b>${esc(b.name)}</b></div>`;
+  requestAnimationFrame(() => toastEl.classList.add("show"));
+  confetti();
+  clearTimeout(toastEl._t); toastEl._t = setTimeout(() => toastEl.classList.remove("show"), 2300);
+}
+function confetti(){
+  if (matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+  let c = $("#confetti"); if (!c) { c = document.createElement("canvas"); c.id = "confetti"; document.body.appendChild(c); }
+  const ctx = c.getContext("2d"), W = c.width = innerWidth, H = c.height = innerHeight;
+  const cs = getComputedStyle(document.documentElement);
+  const cols = ["--gold","--accent","--c-urss","--c-fp","--c-def","--c-approf"].map(v => cs.getPropertyValue(v).trim() || "#c90");
+  const ps = Array.from({length:90}, () => ({x:W/2 + (Math.random()-.5)*80, y:H*.75, vx:(Math.random()-.5)*12, vy:-Math.random()*14-6, r:Math.random()*6+3, c:cols[Math.floor(Math.random()*cols.length)], a:Math.random()*6, s:(Math.random()-.5)*.3}));
+  let f = 0;
+  (function tick(){
+    ctx.clearRect(0,0,W,H);
+    ps.forEach(p => { p.x += p.vx; p.y += p.vy; p.vy += .42; p.vx *= .99; p.a += p.s; ctx.save(); ctx.translate(p.x,p.y); ctx.rotate(p.a); ctx.fillStyle = p.c; ctx.fillRect(-p.r/2,-p.r/4,p.r,p.r/2); ctx.restore(); });
+    if (++f < 110) requestAnimationFrame(tick); else ctx.clearRect(0,0,W,H);
+  })();
+}
+function xpFloat(n){
+  if (n <= 0) return;
+  const el = document.createElement("div"); el.className = "xpfloat"; el.textContent = "+" + n + " XP";
+  document.body.appendChild(el); setTimeout(() => el.remove(), 950);
+}
+function addXP(n){ S.xp += n; xpFloat(n); }
+
+/* Statistiques anonymes (GoatCounter) : uniquement le nombre de sessions terminées, sans donnée personnelle */
+function track(name){ try { if (window.goatcounter && window.goatcounter.count) window.goatcounter.count({path: "tstmg-h1-" + name, title: name, event: true}); } catch(e) {} }
+
+/* Statistiques anonymes (Google Sheets) : appli et mode de jeu uniquement */
+const APP_NAME = "Réviser Tle STMG H1";
+const STATS_URL = window.H2_STATS_URL || "";
+function deviceType(){
+  try {
+    const touch = matchMedia("(pointer: coarse)").matches;
+    if (!touch) return "ordinateur";
+    return Math.min(screen.width, screen.height) < 600 ? "téléphone" : "tablette";
+  } catch(e) { return ""; }
+}
+function reportVisit(){
+  try {
+    if (!STATS_URL || navigator.webdriver) return; // pas de comptage pour les navigateurs pilotés par des robots
+    const send = () => {
+      ["pointerdown", "keydown", "touchstart"].forEach(ev => removeEventListener(ev, send, true));
+      try { if (sessionStorage.getItem("h2-visite")) return; sessionStorage.setItem("h2-visite", "1"); } catch(e) {}
+      fetch(STATS_URL, {method: "POST", mode: "no-cors", keepalive: true, headers: {"Content-Type": "text/plain;charset=utf-8"},
+        body: JSON.stringify({type: "visite", app: APP_NAME, appareil: deviceType()})}).catch(() => {});
+    };
+    // La visite n'est comptée qu'au premier vrai geste (clic, toucher ou touche du clavier)
+    ["pointerdown", "keydown", "touchstart"].forEach(ev => addEventListener(ev, send, {capture: true, passive: true}));
+  } catch(e) {}
+}
+function report(mode, score, total, results){
+  try {
+    if (!STATS_URL || navigator.webdriver || !Object.keys(results).length) return;
+    const body = JSON.stringify({app: APP_NAME, mode});
+    fetch(STATS_URL, {method: "POST", mode: "no-cors", keepalive: true, headers: {"Content-Type": "text/plain;charset=utf-8"}, body}).catch(() => {});
+  } catch(e) {}
+}
+
+/* ---------- Mise à jour d'une carte ---------- */
+function grade(id, r){ // r : 0 raté, 1 presque, 2 su
+  const rec = S.cards[id] || (S.cards[id] = {b:0, ok:0, ko:0});
+  const before = rec.b;
+  if (r === 2) {
+    if (rec.f) { S.comeback++; rec.f = false; }
+    delete rec.due;
+    rec.b = Math.min(5, Math.max(before, 1) + 1); rec.ok++;
+  } else if (r === 1) {
+    rec.b = before >= 3 ? before - 1 : Math.max(1, before === 0 ? 1 : before);
+    if (before === 0) rec.b = 1;
+    rec.due = tomorrow();
+  } else {
+    rec.b = 1; rec.ko++; rec.f = true; rec.due = tomorrow();
+  }
+  rec.last = Date.now();
+  S.reviewed++; markDay();
+}
+
+/* ---------- Sélection des cartes ---------- */
+function pool(){ S.sel = S.sel.filter(t => THEMES[t]); return CARDS.filter(c => S.sel.includes(c.t)); }
+function pick(list, n){
+  const now = Date.now();
+  return list.map(c => {
+    const r = S.cards[c.id]; const b = r ? r.b : 0;
+    let pr = b === 0 ? 1.3 : b === 1 ? 0 : b; // les cartes ratées passent en premier, puis les nouvelles
+    if (r && r.last && now - r.last < 8 * 60 * 1000) pr += 1.5;
+    return {c, pr: pr + Math.random() * 1.2};
+  }).sort((a, b) => a.pr - b.pr).slice(0, n).map(x => x.c);
+}
+
+/* =========================================================
+   ACCUEIL
+   ========================================================= */
+let confirmReset = false;
+function home(){
+  view = "home"; stopTimer(); clearInterval(examTick);
+  const lv = level(), g = mastery(CARDS);
+  const acquired = CARDS.filter(c => box(c.id) >= 3).length;
+  const fails = failedIds().length;
+  const nb = Object.keys(S.badges).length;
+  const sizes = [10, 20, 40, "Tout"];
+  const p = pool();
+  app.innerHTML = `
+  <header class="top">
+    <div class="brand"><div class="tab-h2" aria-hidden="true">H1</div>
+      <div class="brand-txt"><b>Totalitarismes et Seconde Guerre mondiale</b><span>Terminale STMG · 1924-1945 · Révisions</span>
+        <div class="chips"><span class="chip">${ico("pin",13)} Lycée Édouard Herriot · Voiron · Tle STMG</span><span class="chip">${ico("user",13)} M. Cador · Enseignant</span></div></div></div>
+    <div class="navbtns"><button class="ghost" id="toBadges">${ico("medal",16)} Badges et bilan</button></div>
+  </header>
+
+  ${fails ? `<div class="review-banner today"><p><b>${fails} carte${fails > 1 ? "s" : ""} à revoir aujourd'hui.</b> Ce sont celles que vous aviez ratées : revoyez-les pour les fixer.</p><button class="go" id="goFails">${ico("loop",18)} Les revoir</button></div>` : ""}
+
+  <section class="dash fade-in" aria-label="Votre progression">
+    <div class="player">
+      <div class="lvl" title="Niveau ${lv.n} sur ${LEVELS.length}">${lv.n}<small>NIV.</small></div>
+      <div class="pinfo">
+        <div class="pname"><h2>${esc(lv.name)}</h2></div>
+        <div class="xpbar"><i style="width:${pct(lv.p)}%"></i></div>
+        <div class="xptxt"><span>${S.xp} XP</span><span>${lv.next ? "niveau suivant : " + pct(lv.next) + " %" : "niveau maximum"}</span></div>
+      </div>
+    </div>
+    <div class="stats">
+      <div class="stat ready"><b>${pct(g)} %</b><span>prêt pour l'évaluation</span></div>
+      <div class="stat"><b>${acquired}<small class="muted" style="font-size:16px">/${CARDS.length}</small></b><span>cartes acquises</span></div>
+      <div class="stat fire"><b>${dayStreak()}</b><span>jour${dayStreak() > 1 ? "s" : ""} de révision d'affilée</span></div>
+      <div class="stat"><b>${nb}<small class="muted" style="font-size:16px">/${BADGES.length}</small></b><span>badges gagnés</span></div>
+    </div>
+  </section>
+
+
+  <section class="how" aria-label="Comment ça marche">
+    <h3>Comment ça marche ?</h3>
+    <ol>
+      <li><span><b>Choisissez</b> vos thèmes et un mode de jeu.</span></li>
+      <li><span><b>Lisez la question</b>, cherchez la réponse dans votre tête, puis retournez la carte.</span></li>
+      <li><span><b>Soyez honnête</b> : « Je savais », « Presque » ou « Raté ».</span></li>
+      <li><span><b>Les cartes ratées reviennent</b> le lendemain, jusqu'à ce que vous les sachiez.</span></li>
+    </ol>
+    <p>Chaque bonne réponse rapporte des points (XP). Enchaînez les bonnes réponses pour gagner plus et débloquer des badges.</p>
+  </section>
+
+  <div class="sec-title"><h3>Choisissez vos thèmes</h3><button class="linkbtn" id="allThemes">${S.sel.length === Object.keys(THEMES).length ? "Tout désélectionner" : "Tout sélectionner"}</button></div>
+  <div class="themes">
+    ${Object.entries(THEMES).map(([k, t]) => { const l = inTheme(k), m = mastery(l); return `
+      <button class="theme" style="--c:${t.color}" aria-pressed="${S.sel.includes(k)}" data-t="${k}">
+        <div class="th-top"><span class="th-name"><span class="dot"></span>${esc(t.label)}</span><span class="chk"></span></div>
+        <div class="mbar"><i style="width:${pct(m)}%"></i></div>
+        <div class="th-meta"><span>${l.length} cartes</span><span>${pct(m)} % maîtrisé</span></div>
+      </button>`; }).join("")}
+  </div>
+
+  <div class="sec-title"><h3>Choisissez votre mode</h3><span class="muted" style="font-size:14px">${p.length} cartes sélectionnées</span></div>
+  <div class="modes">
+    <div class="mode">
+      <h4>${ico("flip",22)} Flip cards</h4>
+      <p>Lisez la question, cherchez la réponse dans votre tête, retournez la carte et notez-vous honnêtement. Les cartes ratées reviennent le lendemain.</p>
+      <div class="seg" role="group" aria-label="Nombre de cartes">${sizes.map(s => `<button data-size="${s}" aria-pressed="${String(S.size) === String(s)}">${s}</button>`).join("")}</div>
+      <button class="go" id="goFlip" ${p.length ? "" : "disabled"}>Commencer ${ico("arrow",18)}</button>
+    </div>
+    <div class="mode">
+      <h4>${ico("quiz",22)} Défi QCM</h4>
+      <p>10 questions à choix multiples, corrigées tout de suite. Répondez vite pour gagner un bonus. Visé : 10/10.</p>
+      <button class="go alt" id="goQcm" ${qcmPool().length >= 4 ? "" : "disabled"}>Lancer le défi ${ico("arrow",18)}</button>
+      ${qcmPool().length >= 4 ? "" : `<p style="font-size:12.5px">Sélectionnez Définitions, Dates, Allemagne, URSS, Guerre totale ou Anéantissement.</p>`}
+    </div>
+    <div class="mode">
+      <h4>${ico("line",22)} Frise</h4>
+      <p>5 événements mélangés : touchez-les dans l'ordre chronologique, du plus ancien au plus récent.</p>
+      <button class="go alt" id="goFrise">Remettre dans l'ordre ${ico("arrow",18)}</button>
+    </div>
+    <div class="mode">
+      <h4>${ico("pen",22)} Construire un plan</h4>
+      <p>Les ${PLANS.length} sujets possibles de l'évaluation : rangez les idées dans la bonne partie et repérez l'idée hors sujet.</p>
+      <button class="go alt" id="goPlan">Construire ${ico("arrow",18)}</button>
+    </div>
+    <div class="mode exam">
+      <h4>${ico("clock",22)} Évaluation blanche</h4>
+      <span class="veille">À faire la veille de l'évaluation</span>
+      <p>${EXAM_N} questions essentielles pour le contrôle : définitions, dates et connaissances de la fiche de révision. Avec chrono, sans correction pendant l'épreuve. À la fin : votre note sur 20 et votre bilan par notion.</p>
+      <button class="go" id="goExam">Commencer l'évaluation ${ico("arrow",18)}</button>
+    </div>
+  </div>
+
+  <div class="sec-title"><h3>Vos badges</h3><button class="linkbtn" id="toBadges2">Voir tous les badges</button></div>
+  <div class="badge-strip">
+    ${BADGES.slice().sort((a, b) => (S.badges[b.id] ? 1 : 0) - (S.badges[a.id] ? 1 : 0)).slice(0, 8).map(b => `<div class="medal${S.badges[b.id] ? "" : " locked"}" title="${esc(b.desc)}"><div class="disc">${ico(b.icon,30)}</div><span>${esc(b.name)}</span></div>`).join("")}
+  </div>
+  <p class="foot">Votre progression est enregistrée dans ce navigateur, sur cet appareil.</p>`;
+
+  app.querySelectorAll(".theme").forEach(b => b.onclick = () => {
+    const t = b.dataset.t; S.sel = S.sel.includes(t) ? S.sel.filter(x => x !== t) : S.sel.concat(t); save(); home();
+  });
+  $("#allThemes").onclick = () => { S.sel = S.sel.length === Object.keys(THEMES).length ? [] : Object.keys(THEMES); save(); home(); };
+  app.querySelectorAll("[data-size]").forEach(b => b.onclick = () => { S.size = b.dataset.size === "Tout" ? "Tout" : +b.dataset.size; save(); home(); });
+  $("#goFlip").onclick = () => { const n = S.size === "Tout" ? p.length : S.size; startFlip(pick(p, n).map(c => c.id)); };
+  $("#goQcm").onclick = startQcm;
+  $("#goFrise").onclick = startFrise;
+  $("#goExam").onclick = startExam;
+  $("#goPlan").onclick = planPick;
+  $("#toBadges").onclick = $("#toBadges2").onclick = badgesView;
+  const gf = $("#goFails"); if (gf) gf.onclick = () => startFlip(shuffle(failedIds()));
+  window.scrollTo(0, 0);
+}
+
+/* =========================================================
+   FLIP CARDS
+   ========================================================= */
+let view = "home", F = null;
+function startFlip(ids){
+  if (!ids.length) return;
+  F = {queue: ids.slice(), total: ids.length, done: 0, i: 0, flipped: false, combo: 0, xp0: S.xp, res: {}, requeue: {}, t0: Date.now()};
+  view = "flip"; renderFlip();
+}
+function boxDots(id, color){
+  const b = box(id); let h = "";
+  for (let i = 1; i <= 5; i++) h += `<i class="${i <= b ? "on" : ""}"></i>`;
+  return `<span class="fbox" title="Niveau de la carte : ${b}/5">${h}</span>`;
+}
+function renderFlip(){
+  if (F.i >= F.queue.length) return endFlip();
+  const c = byId[F.queue[F.i]], th = THEMES[c.t];
+  F.flipped = false;
+  app.innerHTML = `
+  <div class="sess-head">
+    <button class="ghost" id="quit" aria-label="Retour à l'accueil">${ico("back",16)}</button>
+    <div class="prog" aria-hidden="true"><i style="width:${pct(F.done / F.total)}%"></i></div>
+    <span class="sess-count">${F.done}/${F.total}</span>
+    <span class="combo" id="combo">${F.combo >= 2 ? "×" + F.combo : ""}</span>
+  </div>
+  <div class="stage fade-in">
+    <div class="flip" id="flip" tabindex="0" role="button" aria-label="Retourner la carte">
+      <div class="face front" style="--c:${th.color}">
+        <div class="fhead"><span class="ftag">${esc(th.short)}</span>${boxDots(c.id)}</div>
+        <div class="ruled"><div class="q">${c.q}</div><div class="hint">Touchez la carte pour voir le corrigé</div></div>
+      </div>
+      <div class="face back" style="--c:${th.color}">
+        <div class="fhead"><span class="ftag">Corrigé · ${esc(th.short)}</span>${boxDots(c.id)}</div>
+        <div class="ruled">
+          <p class="qback">${strip(c.q)}</p>
+          <div class="ans-label">Réponse</div>
+          <div class="ans">${c.a}</div>
+          ${c.d ? `<div class="det">${c.d}</div>` : ""}
+          ${c.p ? `<div class="plus"><b class="lab">Pour aller plus loin</b>${c.p}</div>` : ""}
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="actions"><button class="go reveal" id="reveal">Voir la réponse</button></div>
+  <p class="keys">Espace : retourner · 1 : raté · 2 : presque · 3 : je savais</p>`;
+  $("#quit").onclick = () => { save(); home(); };
+  $("#flip").onclick = doFlip;
+  $("#reveal").onclick = doFlip;
+}
+function doFlip(){
+  if (view !== "flip") return;
+  F.flipped = !F.flipped;
+  $("#flip").classList.toggle("flipped", F.flipped);
+  if (F.flipped && !$("#rate")) {
+    $("#actions").innerHTML = `<div class="rate" id="rate">
+      <button class="r0" data-r="0">Raté<small>reviendra vite</small></button>
+      <button class="r1" data-r="1">Presque<small>reviendra</small></button>
+      <button class="r2" data-r="2">Je savais<small>+10 XP</small></button></div>`;
+    app.querySelectorAll("[data-r]").forEach(b => b.onclick = e => { e.stopPropagation(); rateFlip(+b.dataset.r); });
+  }
+}
+function rateFlip(r){
+  const id = F.queue[F.i];
+  grade(id, r);
+  if (!(id in F.res)) F.res[id] = r;
+  let gain;
+  if (r === 2) { F.combo++; S.bestStreak = Math.max(S.bestStreak, F.combo); gain = 10 + Math.min(F.combo - 1, 5) * 2; }
+  else { F.combo = 0; gain = r === 1 ? 4 : 1; }
+  addXP(gain);
+  // les cartes ratées reviennent dans la même session
+  const n = F.requeue[id] || 0;
+  if (r === 0 && n < 3) { F.queue.splice(Math.min(F.queue.length, F.i + 4), 0, id); F.requeue[id] = n + 1; }
+  else if (r === 1 && n < 1) { F.queue.splice(Math.min(F.queue.length, F.i + 7), 0, id); F.requeue[id] = n + 1; }
+  if (!F.queue.slice(F.i + 1).includes(id)) F.done++;
+  F.i++;
+  save(); checkBadges();
+  renderFlip();
+  if (F.combo >= 2) { const el = $("#combo"); if (el) el.classList.add("pop"); }
+}
+function endFlip(){
+  view = "end"; track("session-flipcards");
+  const ids = Object.keys(F.res);
+  report("Flip cards", ids.filter(i => F.res[i] === 2).length, ids.length, F.res, F.t0);
+  const k = ids.filter(i => F.res[i] === 0), m = ids.filter(i => F.res[i] === 1), o = ids.filter(i => F.res[i] === 2);
+  const toReview = k.concat(m);
+  const msg = o.length === ids.length ? "Parfait !" : o.length / ids.length >= .7 ? "Très bien !" : o.length / ids.length >= .4 ? "Bon travail" : "Continuez !";
+  app.innerHTML = `
+  <div class="endcard fade-in">
+    <div><span class="ftag" style="--c:var(--accent);color:var(--accent)">Session terminée</span><h2>${msg}</h2></div>
+    <div class="endstats">
+      <div class="stat"><b class="o">${o.length}</b><span>du premier coup</span></div>
+      <div class="stat"><b class="m">${m.length}</b><span>presque</span></div>
+      <div class="stat"><b class="k">${k.length}</b><span>ratées au départ</span></div>
+      <div class="stat"><b class="x">+${S.xp - F.xp0}</b><span>XP gagnés</span></div>
+    </div>
+    ${toReview.length ? `<div><h3 style="font-family:var(--f-display);text-transform:uppercase;font-size:20px;margin-bottom:8px">À retenir</h3>
+      <div class="miss">${toReview.map(i => { const c = byId[i], th = THEMES[c.t]; return `<details style="--c:${th.color}"><summary><span class="ftag">${esc(th.short)}</span>${strip(c.q)}</summary><p><b>${c.a}</b></p>${c.d ? `<div style="margin-top:8px">${c.d}</div>` : ""}</details>`; }).join("")}</div></div>` : ""}
+    <div class="row">
+      ${toReview.length ? `<button class="go" id="again">${ico("loop",18)} Rejouer ces ${toReview.length} cartes</button>` : ""}
+      <button class="go alt" id="more">Nouvelle session</button>
+      <button class="go alt" id="back">Accueil</button>
+    </div>
+  </div>`;
+  if (toReview.length) $("#again").onclick = () => startFlip(shuffle(toReview));
+  $("#more").onclick = () => { const p = pool(); startFlip(pick(p, S.size === "Tout" ? p.length : S.size).map(c => c.id)); };
+  $("#back").onclick = home;
+  if (o.length === ids.length && ids.length >= 5) confetti();
+  window.scrollTo(0, 0);
+}
+
+/* =========================================================
+   QCM
+   ========================================================= */
+let Q = null, timerRAF = 0;
+function qcmPool(){ return pool().filter(c => c.g && c.s && new Set(CARDS.filter(x => x.g === c.g && x.s).map(x => x.s)).size >= 4); }
+function stopTimer(){ cancelAnimationFrame(timerRAF); }
+function startQcm(){
+  const list = pick(qcmPool(), 10);
+  Q = {list, i: 0, score: 0, xp0: S.xp, wrong: [], res: {}, t0: Date.now()};
+  view = "qcm"; renderQcm();
+}
+function optionsFor(c){
+  const same = CARDS.filter(x => x.g === c.g && x.s && x.s !== c.s && x.id !== c.id);
+  const uniq = []; shuffle(same).forEach(x => { if (!uniq.some(u => u.s === x.s)) uniq.push(x); });
+  return shuffle([c].concat(uniq.slice(0, 3)));
+}
+function qcmQuestion(c){
+  if (c.g === "def") return "Quelle est la bonne définition de " + c.q.replace(/^Définisse?z?\s*:\s*/, "") + " ?";
+  return c.q;
+}
+function renderQcm(){
+  if (Q.i >= Q.list.length) return endQcm();
+  const c = Q.list[Q.i], th = THEMES[c.t], opts = optionsFor(c);
+  app.innerHTML = `
+  <div class="sess-head">
+    <button class="ghost" id="quit" aria-label="Retour à l'accueil">${ico("back",16)}</button>
+    <div class="prog" aria-hidden="true"><i style="width:${pct(Q.i / Q.list.length)}%"></i></div>
+    <span class="sess-count">${Q.i + 1}/${Q.list.length}</span>
+    <span class="combo">${Q.score} pt${Q.score > 1 ? "s" : ""}</span>
+  </div>
+  <div class="face fade-in" style="--c:${th.color};min-height:0">
+    <div class="fhead"><span class="ftag">Défi · ${esc(th.short)}</span><span class="fbox">bonus vitesse</span></div>
+    <div class="timer"><i id="tbar"></i></div>
+    <div class="ruled" style="padding-block:14px"><div class="q" style="padding-block:6px;font-size:clamp(19px,3vw,24px)">${qcmQuestion(c)}</div></div>
+  </div>
+  <div class="qcm-opts">${opts.map((o, i) => `<button class="opt" data-id="${o.id}"><span class="l">${"ABCD"[i]}</span><span>${esc(o.s)}</span></button>`).join("")}</div>
+  <div id="fb"></div>`;
+  $("#quit").onclick = () => { stopTimer(); save(); home(); };
+  const t0 = performance.now(), LIM = 10000;
+  stopTimer();
+  (function tk(){ const e = performance.now() - t0, bar = $("#tbar"); if (!bar) return; bar.style.width = Math.max(0, 100 - e / LIM * 100) + "%"; if (e < LIM) timerRAF = requestAnimationFrame(tk); })();
+  app.querySelectorAll(".opt").forEach(b => b.onclick = () => {
+    stopTimer();
+    const fast = performance.now() - t0 < LIM;
+    const ok = b.dataset.id === c.id;
+    app.querySelectorAll(".opt").forEach(x => { x.disabled = true; if (x.dataset.id === c.id) x.classList.add("good"); });
+    if (!ok) b.classList.add("bad");
+    grade(c.id, ok ? 2 : 0); Q.res[c.id] = ok ? 2 : 0;
+    let gain = 0;
+    if (ok) { Q.score++; gain = 12 + (fast ? 5 : 0); } else Q.wrong.push(c.id);
+    if (gain) addXP(gain);
+    save();
+    $("#fb").innerHTML = `<div class="feedback ${ok ? "" : "ko"} fade-in"><b class="v" style="color:${ok ? "var(--ok)" : "var(--ko)"}">${ok ? (fast ? "Bonne réponse, et rapide !" : "Bonne réponse") : "Pas tout à fait"}</b>
+      <div><b>${c.a}</b></div>${c.d ? `<div style="margin-top:4px">${c.d}</div>` : ""}</div>
+      <button class="go" id="next" style="width:100%;margin-top:12px">${Q.i + 1 < Q.list.length ? "Question suivante" : "Voir votre score"} ${ico("arrow",18)}</button>`;
+    $("#next").onclick = () => { Q.i++; renderQcm(); };
+    $("#next").focus({preventScroll:true});
+    checkBadges();
+  });
+}
+function endQcm(){
+  view = "end"; track("session-qcm"); report("QCM", Q.score, Q.list.length, Q.res, Q.t0);
+  const perfect = Q.score === Q.list.length && Q.list.length >= 10;
+  if (perfect) addXP(30);
+  save(); checkBadges({qcmPerfect: perfect});
+  app.innerHTML = `
+  <div class="endcard fade-in">
+    <div><span class="ftag" style="color:var(--accent)">Défi QCM terminé</span><h2>${Q.score}/${Q.list.length}${perfect ? " · Sans faute !" : ""}</h2></div>
+    <div class="endstats">
+      <div class="stat"><b class="o">${Q.score}</b><span>bonnes réponses</span></div>
+      <div class="stat"><b class="k">${Q.wrong.length}</b><span>erreurs</span></div>
+      <div class="stat"><b class="x">+${S.xp - Q.xp0}</b><span>XP gagnés</span></div>
+      <div class="stat"><b>${pct(mastery(CARDS))} %</b><span>maîtrise globale</span></div>
+    </div>
+    ${Q.wrong.length ? `<div class="miss">${Q.wrong.map(i => { const c = byId[i], th = THEMES[c.t]; return `<details style="--c:${th.color}"><summary><span class="ftag">${esc(th.short)}</span>${strip(qcmQuestion(c))}</summary><p><b>${c.a}</b></p></details>`; }).join("")}</div>` : ""}
+    <div class="row">
+      ${Q.wrong.length ? `<button class="go" id="again">${ico("flip",18)} Retravailler vos erreurs en flip cards</button>` : ""}
+      <button class="go alt" id="more">Nouveau défi</button>
+      <button class="go alt" id="back">Accueil</button>
+    </div>
+  </div>`;
+  if (Q.wrong.length) $("#again").onclick = () => startFlip(shuffle(Q.wrong));
+  $("#more").onclick = startQcm;
+  $("#back").onclick = home;
+  if (perfect) confetti();
+  window.scrollTo(0, 0);
+}
+
+/* =========================================================
+   FRISE
+   ========================================================= */
+let FR = null;
+function themeOfDate(c){
+  const id = c.id;
+  if (["t2","t3"].includes(id)) return "urss";
+  if (["t1","t4","t5"].includes(id)) return "nazi";
+  if (["t7","t8","t10"].includes(id)) return "anea";
+  return "totale";
+}
+/* =========================================================
+   ÉVALUATION BLANCHE
+   ========================================================= */
+const EXAM_N = Object.values(EXAM_PLAN).reduce((x, y) => x + y, 0);
+let E = null, examTick = 0;
+// Transforme une carte de l'appli ou une question essentielle en question d'évaluation
+function examItem(src){
+  if (typeof src === "string" || src.card) {
+    const c = byId[typeof src === "string" ? src : src.card];
+    return {t: c.t, cid: c.id, q: qcmQuestion(c), ok: c.s, opts: optionsFor(c).map(o => o.s), expl: c.a + (c.d ? "<br>" + c.d : "")};
+  }
+  const c = src.c && byId[src.c];
+  return {t: src.t, cid: c ? c.id : null, q: src.q, ok: src.ok, opts: shuffle([src.ok].concat(src.x)), expl: c ? c.a + (c.d ? "<br>" + c.d : "") : ""};
+}
+function startExam(){
+  const list = [];
+  Object.entries(EXAM_PLAN).forEach(([k, n]) => {
+    shuffle(ESSENTIELS[k].filter(x => typeof x !== "string" || byId[x]).filter(x => !(x && x.card) || byId[x.card])).slice(0, n).forEach(x => list.push(examItem(x)));
+  });
+  E = {list: shuffle(list), i: 0, answers: {}, t0: Date.now(), xp0: S.xp};
+  view = "exam"; renderExam();
+  clearInterval(examTick);
+  examTick = setInterval(() => { const el = $("#chrono"); if (el) el.textContent = mmss(Date.now() - E.t0); else clearInterval(examTick); }, 1000);
+}
+const mmss = ms => { const s = Math.floor(ms / 1000); return String(Math.floor(s / 60)).padStart(2, "0") + ":" + String(s % 60).padStart(2, "0"); };
+function renderExam(){
+  const c = E.list[E.i], th = THEMES[c.t], opts = c.opts, chosen = E.answers[E.i];
+  app.innerHTML = `
+  <div class="sess-head">
+    <button class="ghost" id="quit" aria-label="Abandonner l'évaluation">${ico("back",16)}</button>
+    <div class="prog" aria-hidden="true"><i style="width:${pct(E.i / E.list.length)}%"></i></div>
+    <span class="sess-count">${E.i + 1}/${E.list.length}</span>
+    <span class="combo mono" id="chrono" title="Temps écoulé">${mmss(Date.now() - E.t0)}</span>
+  </div>
+  <div class="face fade-in" style="--c:${th.color};min-height:0">
+    <div class="fhead"><span class="ftag">Évaluation blanche · ${esc(th.short)}</span><span class="fbox">sans correction immédiate</span></div>
+    <div class="ruled" style="padding-block:14px"><div class="q" style="padding-block:6px;font-size:clamp(19px,3vw,24px)">${c.q}</div></div>
+  </div>
+  <div class="qcm-opts">${opts.map((o, i) => `<button class="opt${chosen === i ? " chosen" : ""}" data-i="${i}" aria-pressed="${chosen === i}"><span class="l">${"ABCD"[i]}</span><span>${esc(o)}</span></button>`).join("")}</div>
+  <div class="row" style="margin-top:14px">
+    ${E.i > 0 ? `<button class="go alt" id="prev">${ico("back",18)} Précédente</button>` : ""}
+    <button class="go" id="next" ${chosen !== undefined ? "" : "disabled"}>${E.i + 1 < E.list.length ? "Question suivante" : "Terminer et voir votre note"} ${ico("arrow",18)}</button>
+  </div>
+  <div id="quitBox"></div>`;
+  app.querySelectorAll(".opt").forEach(b => b.onclick = () => { E.answers[E.i] = +b.dataset.i; renderExam(); });
+  $("#next").onclick = () => { if (E.i + 1 < E.list.length) { E.i++; renderExam(); } else endExam(); };
+  const pv = $("#prev"); if (pv) pv.onclick = () => { E.i--; renderExam(); };
+  $("#quit").onclick = () => {
+    $("#quitBox").innerHTML = `<div class="confirm-box" style="margin-top:14px"><span>Abandonner l'évaluation ? Vos réponses ne seront pas comptées.</span><button class="danger" id="qYes">Abandonner</button><button class="ghost" id="qNo">Continuer</button></div>`;
+    $("#qYes").onclick = () => { clearInterval(examTick); home(); };
+    $("#qNo").onclick = () => { $("#quitBox").innerHTML = ""; };
+  };
+  window.scrollTo(0, 0);
+}
+function endExam(){
+  clearInterval(examTick);
+  view = "end";
+  const dur = Date.now() - E.t0;
+  const res = {}; let ok = 0;
+  const notions = {};
+  E.list.forEach((c, i) => {
+    c.mine = c.opts[E.answers[i]];
+    const good = c.mine === c.ok; c.good = good; if (good) ok++;
+    if (c.cid) { res[c.cid] = good ? 2 : 0; grade(c.cid, good ? 2 : 0); }
+    const n = notions[c.t] || (notions[c.t] = {ok: 0, tot: 0}); n.tot++; if (good) n.ok++;
+  });
+  const note = Math.round(ok / E.list.length * 40) / 2;
+  addXP(ok * 8 + (note >= 16 ? 30 : 0));
+  report("Évaluation blanche", ok, E.list.length, res);
+  S.examBest = Math.max(S.examBest || 0, note); save(); checkBadges();
+  const wrong = E.list.filter(c => !c.good);
+  const msg = note >= 16 ? "Excellent, vous êtes prêt !" : note >= 12 ? "Bien, encore un petit effort" : note >= 8 ? "Des bases, mais il faut réviser" : "À retravailler avant l'évaluation";
+  app.innerHTML = `
+  <div class="endcard fade-in">
+    <div><span class="ftag" style="color:var(--accent)">Évaluation blanche · ${mmss(dur)}</span>
+      <h2 class="note20">${String(note).replace(".", ",")}<small>/20</small></h2><p class="muted" style="margin:6px 0 0;font-size:15px">${msg} · ${ok} bonne${ok > 1 ? "s" : ""} réponse${ok > 1 ? "s" : ""} sur ${E.list.length}</p></div>
+    <div><h3 style="font-family:var(--f-display);text-transform:uppercase;font-size:20px;margin-bottom:8px">Bilan par notion</h3>
+      <div class="tbars">${Object.entries(notions).map(([t, n]) => `<div class="tbar" style="--c:${THEMES[t].color}"><span>${esc(THEMES[t].label)}</span><div class="mbar"><i style="width:${pct(n.ok / n.tot)}%"></i></div><b>${n.ok}/${n.tot}</b></div>`).join("")}</div></div>
+    ${wrong.length ? `<div><h3 style="font-family:var(--f-display);text-transform:uppercase;font-size:20px;margin-bottom:8px">Corrigé de vos erreurs</h3>
+      <div class="miss">${wrong.map(c => { const th = THEMES[c.t]; return `<details style="--c:${th.color}" open><summary><span class="ftag">${esc(th.short)}</span>${strip(c.q)}</summary><p class="muted">Votre réponse : ${esc(c.mine || "—")}</p><p><b>Bonne réponse : ${esc(c.ok)}</b></p>${c.expl ? `<div style="margin-top:4px">${c.expl}</div>` : ""}</details>`; }).join("")}</div>
+      <p class="muted" style="font-size:14px;margin:10px 0 0">Ces cartes reviendront demain dans « Cartes à revoir aujourd'hui ».</p></div>` : ""}
+    <div class="row">
+      ${wrong.length ? `<button class="go" id="again">${ico("flip",18)} Retravailler vos erreurs maintenant</button>` : ""}
+      <button class="go alt" id="more">Nouvelle évaluation blanche</button>
+      <button class="go alt" id="back">Accueil</button>
+    </div>
+  </div>`;
+  const wrongIds = [...new Set(wrong.map(c => c.cid).filter(Boolean))];
+  if (wrong.length) { const ag = $("#again"); if (wrongIds.length) ag.onclick = () => startFlip(shuffle(wrongIds)); else ag.remove(); }
+  $("#more").onclick = startExam;
+  $("#back").onclick = home;
+  if (note >= 16) confetti();
+  window.scrollTo(0, 0);
+}
+
+function startFrise(){
+  const dated = shuffle(CARDS.filter(c => c.k));
+  const chosen = [];
+  for (const c of dated) { if (chosen.length >= 5) break; if (!chosen.some(x => Math.floor(x.k) === Math.floor(c.k))) chosen.push(c); }
+  FR = {items: shuffle(chosen), order: [], checked: false, xp0: S.xp, t0: Date.now()};
+  view = "frise"; renderFrise();
+}
+function renderFrise(){
+  const done = FR.order.length === FR.items.length;
+  const sorted = FR.items.slice().sort((a, b) => a.k - b.k);
+  app.innerHTML = `
+  <div class="sess-head">
+    <button class="ghost" id="quit" aria-label="Retour à l'accueil">${ico("back",16)}</button>
+    <div class="prog" aria-hidden="true"><i style="width:${pct(FR.order.length / FR.items.length)}%"></i></div>
+    <span class="sess-count">${FR.order.length}/${FR.items.length}</span><span class="combo"></span>
+  </div>
+  <div class="face" style="--c:var(--c-dates);min-height:0"><div class="fhead"><span class="ftag">Frise chronologique</span><span class="fbox">1919 → 1949</span></div>
+    <div class="ruled" style="padding-block:14px"><div class="q" style="padding-block:4px;font-size:clamp(18px,2.8vw,22px)">${FR.checked ? "Voici le bon ordre." : "Touchez les événements du plus ancien au plus récent. Touchez à nouveau pour annuler."}</div></div></div>
+  <div class="frise-pool">
+    ${FR.items.map(c => {
+      const pos = FR.order.indexOf(c.id); const tt = themeOfDate(c);
+      let cls = pos >= 0 ? " picked" : "";
+      if (FR.checked) cls += sorted[pos] && sorted[pos].id === c.id ? " right" : " wrong";
+      return `<button class="ev${cls}" data-id="${c.id}" style="--c:${THEMES[tt].color}" ${FR.checked ? "disabled" : ""}><span class="n">${pos >= 0 ? pos + 1 : ""}</span><span><span class="tg">${esc(THEMES[tt].short)}</span>${esc(c.fl)}</span>${FR.checked ? `<span class="yr">${esc(c.s)}</span>` : ""}</button>`;
+    }).join("")}
+  </div>
+  ${FR.checked ? `<div class="timeline">${sorted.map(c => `<div class="tl" style="--c:${THEMES[themeOfDate(c)].color}"><b>${esc(c.s)}</b>${esc(c.fl)}</div>`).join("")}</div>` : ""}
+  <div class="row" style="margin-top:14px">
+    ${FR.checked ? `<button class="go" id="again">Nouvelle frise ${ico("arrow",18)}</button><button class="go alt" id="back">Accueil</button>`
+      : `<button class="go" id="check" ${done ? "" : "disabled"}>Vérifier</button>`}
+  </div>
+  <div id="fb"></div>`;
+  $("#quit").onclick = () => { save(); home(); };
+  if (!FR.checked) app.querySelectorAll(".ev").forEach(b => b.onclick = () => {
+    const id = b.dataset.id; const p = FR.order.indexOf(id);
+    if (p >= 0) FR.order.splice(p, 1); else FR.order.push(id);
+    renderFrise();
+  });
+  if (!FR.checked) $("#check").onclick = () => {
+    FR.checked = true; track("session-frise");
+    let good = 0; FR.order.forEach((id, i) => { if (sorted[i].id === id) good++; });
+    const fres = {}; FR.items.forEach(c => { const r = sorted[FR.order.indexOf(c.id)].id === c.id ? 2 : 0; fres[c.id] = r; grade(c.id, r); });
+    report("Frise", good, FR.items.length, fres, FR.t0);
+    let gain = good * 6;
+    if (good === FR.items.length) { gain += 20; S.frisePerfect++; confetti(); }
+    addXP(gain); save(); checkBadges();
+    renderFrise();
+    $("#fb").innerHTML = `<div class="feedback ${good === FR.items.length ? "" : "ko"}"><b class="v" style="color:${good === FR.items.length ? "var(--ok)" : "var(--ko)"}">${good}/${FR.items.length} bien placés</b>${good === FR.items.length ? "Frise parfaite : +20 XP de bonus." : "Les événements mal placés sont encadrés en rouge. Relisez la frise ci-dessus."}</div>`;
+  };
+  else { $("#again").onclick = startFrise; $("#back").onclick = home; }
+}
+
+/* =========================================================
+   CONSTRUIRE UN PLAN
+   ========================================================= */
+function head(done, total, count, right){
+  return `<div class="sess-head">
+    <button class="ghost" id="quit" aria-label="Retour à l'accueil">${ico("back",16)}</button>
+    <div class="prog" aria-hidden="true"><i style="width:${pct(done / total)}%"></i></div>
+    <span class="sess-count">${count}</span>
+    <span class="combo" id="combo">${right || ""}</span>
+  </div>`;
+}
+function bindQuit(){ const q = $("#quit"); if (q) q.onclick = () => { save(); home(); }; }
+function intro(color, tag, box, text, still){
+  return `<div class="face${still ? "" : " fade-in"}" style="--c:${color};min-height:0"><div class="fhead"><span class="ftag">${tag}</span><span class="fbox">${box}</span></div>
+    <div class="ruled" style="padding-block:14px"><div class="q" style="padding-block:6px;font-size:clamp(19px,3vw,24px)">${text}</div></div></div>`;
+}
+function keepScroll(fn){ const y = window.scrollY; fn(); window.scrollTo(0, y); }
+let PL = null;
+function planPick(){
+  view = "planpick";
+  app.innerHTML = `<div class="sess-head"><button class="ghost" id="quit" aria-label="Retour à l'accueil">${ico("back",16)}</button></div>
+  ${intro("var(--c-methode)", "Construire un plan", "développement construit", "Choisissez un sujet. Rangez chaque idée dans la bonne partie et repérez l'idée hors sujet (✕).")}
+  <div class="subj">${PLANS.map((p, i) => `<button class="ev" data-p="${i}" style="--c:var(--c-methode)"><span class="n">${i + 1}</span><span><span class="tg">Sujet possible</span>${esc(p.s)}</span></button>`).join("")}</div>`;
+  bindQuit();
+  app.querySelectorAll("[data-p]").forEach(b => b.onclick = () => startPlan(+b.dataset.p));
+  window.scrollTo(0, 0);
+}
+function startPlan(i){ PL = {p: i, as: {}, checked: false, order: shuffle(PLANS[i].ideas.map((_, k) => k)), xp0: S.xp}; view = "plan"; renderPlan(); window.scrollTo(0, 0); }
+function renderPlan(){
+  const P = PLANS[PL.p], as = PL.as, n = Object.keys(as).length, tot = P.ideas.length;
+  const ok = k => as[k] === P.ideas[k].p, score = P.ideas.filter((_, k) => ok(k)).length, perfect = score === tot;
+  app.innerHTML = `${head(n, tot, `${n}/${tot}`, "")}
+  <div class="face${PL.drawn ? "" : " fade-in"}" style="--c:var(--c-methode);min-height:0"><div class="fhead"><span class="ftag">Sujet possible</span><span class="fbox">${tot} idées à ranger</span></div>
+    <div class="ruled" style="padding-block:14px"><div class="q" style="padding-block:4px;font-size:clamp(18px,2.8vw,22px)">« ${esc(P.s)} »</div>
+    <div class="skel">${P.parts.map((t, i) => `<div><b>${ROMAN[i]}.</b>${esc(t)}</div>`).join("")}<div class="muted"><b>✕</b>Hors sujet</div></div></div></div>
+  ${PL.order.map(k => { const id = P.ideas[k], st = PL.checked ? (ok(k) ? " right" : " wrong") : "";
+    return `<div class="idea${st}"><p>${esc(id.t)}${PL.checked && !ok(k) ? `<span class="why">→ ${id.p < 0 ? "Hors sujet : " + esc(id.w) : "Partie " + ROMAN[id.p] + " : " + esc(P.parts[id.p])}</span>` : ""}</p>
+      <div class="seg" role="group" aria-label="Partie">${[...P.parts.map((_, i) => i), -1].map(v => `<button data-k="${k}" data-v="${v}" aria-pressed="${as[k] === v}" ${PL.checked ? "disabled" : ""}>${v < 0 ? "✕" : ROMAN[v]}</button>`).join("")}</div></div>`; }).join("")}
+  ${PL.checked ? `<div class="feedback ${perfect ? "" : "ko"} fade-in"><b class="v" style="color:${perfect ? "var(--ok)" : "var(--ko)"}">${score}/${tot} idées bien placées</b><div style="margin-bottom:8px">Voici le plan modèle, à savoir refaire le jour de l'évaluation :</div>${planHtml(P)}</div>
+    <div class="row" style="margin-top:14px"><button class="go" id="other">Autre sujet ${ico("arrow",18)}</button><button class="go alt" id="back">Accueil</button></div>`
+  : `<div class="row" style="margin-top:14px"><button class="go" id="check" ${n < tot ? "disabled" : ""}>Vérifier mon plan ${ico("arrow",18)}</button></div>`}`;
+  PL.drawn = true;
+  bindQuit();
+  if (PL.checked) { $("#other").onclick = planPick; $("#back").onclick = home; return; }
+  app.querySelectorAll("[data-k]").forEach(b => b.onclick = () => { PL.as[+b.dataset.k] = +b.dataset.v; keepScroll(renderPlan); });
+  $("#check").onclick = () => {
+    PL.checked = true; track("session-plan"); report("Plan", score, tot, {plan: score});
+    let gain = score * 3; if (perfect) { gain += 15; confetti(); }
+    addXP(gain); markDay(); save(); checkBadges(); keepScroll(renderPlan);
+  };
+}
+
+/* =========================================================
+   BADGES ET BILAN
+   ========================================================= */
+function badgesView(){
+  view = "badges"; confirmReset = false; renderBadges();
+}
+function renderBadges(){
+  const lv = level(), g = mastery(CARDS);
+  app.innerHTML = `
+  <div class="sess-head"><button class="ghost" id="quit">${ico("back",16)} Accueil</button></div>
+  <section class="bilan fade-in">
+    ${g >= .7 ? `<span class="stamp">Prêt !</span>` : ""}
+    <span class="ftag" style="color:var(--accent)">Bilan de révision · H1</span>
+    <h2>Votre bilan</h2>
+    <div class="muted" style="font-size:14.5px">Niveau ${lv.n}/${LEVELS.length} · ${esc(lv.name)} · ${S.xp} XP · ${S.reviewed} cartes révisées · ${Object.keys(S.badges).length}/${BADGES.length} badges</div>
+    <div class="tbars">
+      ${Object.entries(THEMES).map(([k, t]) => { const m = mastery(inTheme(k)); return `<div class="tbar" style="--c:${t.color}"><span>${esc(t.label)}</span><div class="mbar"><i style="width:${pct(m)}%"></i></div><b>${pct(m)}%</b></div>`; }).join("")}
+      <div class="tbar" style="--c:var(--ok);font-weight:700"><span>Total</span><div class="mbar"><i style="width:${pct(g)}%"></i></div><b>${pct(g)}%</b></div>
+    </div>
+  </section>
+  <div class="sec-title"><h3>Badges</h3><span class="muted" style="font-size:14px">${Object.keys(S.badges).length} sur ${BADGES.length}</span></div>
+  <div class="badges-grid">
+    ${BADGES.map(b => { const has = !!S.badges[b.id]; return `<div class="bitem${has ? "" : " locked"}">${medal(b, !has)}<div><b>${esc(b.name)}</b><p>${esc(b.desc)}</p></div></div>`; }).join("")}
+  </div>
+  <div class="sec-title"><h3>Recommencer à zéro</h3></div>
+  <div class="confirm-box" id="resetZone">
+    ${confirmReset ? `<span>Tout effacer (XP, badges, progression) ?</span><button class="danger" id="yes">Oui, tout effacer</button><button class="ghost" id="no">Annuler</button>`
+      : `<button class="danger" id="reset">Effacer votre progression</button>`}
+  </div>`;
+  $("#quit").onclick = home;
+  if (confirmReset) { $("#yes").onclick = () => { S = fresh(); save(); home(); }; $("#no").onclick = () => { confirmReset = false; renderBadges(); }; }
+  else $("#reset").onclick = () => { confirmReset = true; renderBadges(); };
+  window.scrollTo(0, 0);
+}
+
+/* ---------- Clavier ---------- */
+document.addEventListener("keydown", e => {
+  if (e.target.tagName === "INPUT") return;
+  if (view === "flip") {
+    if (e.key === " " || e.key === "Enter") { e.preventDefault(); if (!F.flipped || !$("#rate")) doFlip(); else doFlip(); }
+    if (F && F.flipped && ["1","2","3"].includes(e.key)) rateFlip(+e.key - 1);
+  }
+});
+
+home();
+reportVisit();
+})();
+
+</script>
+
+</body></html>
